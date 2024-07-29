@@ -8,7 +8,7 @@ import search from '../../imgs/herohill/search.svg'
 import kirish from '../../imgs/herohill/kirish.svg'
 const HeroHill = () => {
   return (
-    <section className='bg-head py-3 hidden md:block'>
+    <section className='bg-head py-3 hidden md:block mb-5'>
       <ul className='containerb flex justify-between items-center'>
         {/* katalog va input */}
         <li>
