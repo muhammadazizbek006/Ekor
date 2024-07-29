@@ -19,14 +19,16 @@ const Header = () => {
                         <img src={logo} alt="logo" />
                     </Link>
                 </li>
+
                 {/* nav */}
-                <li className='text-head space-x-3 lg:space-x-4 text-xs lg:text-sm font-semibold '>
+                <li className='text-head space-x-3 lg:space-x-4 hidden md:inline-block  md:text-xs lg:text-sm font-semibold '>
                     {
                         links.map((e) => (
                             <Link to={e.URL} key={e.id}>{e.title}</Link>
                         ))
                     }
                 </li>
+
                 {/* right  */}
                 <li className='flex items-center'>
                     {/* left */}
