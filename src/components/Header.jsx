@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 import logo from '../imgs/header/logo.svg'
 import telegram from '../imgs/header/telegram.svg'
 import whatsapp from '../imgs/header/whatsapp.svg'
-
+import search from '../imgs/header/search.svg'
+import like from '../imgs/header/like.svg'
+import contact from '../imgs/header/contact.svg'
+import shop from '../imgs/header/shop.svg'
+import burger from '../imgs/header/Burger.svg'
 // data
 import { links } from '../data/Data'
 
@@ -30,7 +34,8 @@ const Header = () => {
                 </li>
 
                 {/* right  */}
-                <li className='flex items-center'>
+                <li className=' hidden md:inline-block'>
+                    <div className='flex items-center'>
                     {/* left */}
                     <div className='flex items-center mr-3 lg:mr-5'>
                         {/* telegram */}
@@ -47,6 +52,31 @@ const Header = () => {
                         <a className='font-bold text-base lg:text-lg text-head' href="">8 (495) 637-82-28</a>
                         <p className='text-gray text-xs font-semibold'>заказать звонок</p>
                     </div>
+
+                    </div>
+                </li>
+                {/*  */}
+                <li className='space-x-4 flex items-center  inline-block md:hidden '>
+                    {/* search */}
+                    <button>
+                        <img src={search} alt="search" />
+                    </button>
+                    {/* contact */}
+                    <button>
+                        <img src={contact} alt="contact" />
+                    </button>
+                    {/* like */}
+                    <button>
+                        <img src={like} alt="like" />
+                    </button>
+                    {/* shop */}
+                    <button className=''>
+                        <img src={shop} alt="shop" />
+                    </button>
+                    {/* burger */}
+                    <button>
+                        <img src={burger} alt="burger" />
+                    </button>
                 </li>
             </ul>
         </div>
