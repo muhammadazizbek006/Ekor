@@ -9,6 +9,7 @@ export default {
       colors:{
         'head':'#203686',
         'gray':'#70798E',
+        'sariq':'#FFED32',
       }
     },
   },
