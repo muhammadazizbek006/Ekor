@@ -37,9 +37,9 @@ const Hero = () => {
             Carusel.map((e)=>{
                 return(
                     
-                    <SwiperSlide 
-                    style={{ backgroundImage: `url(${e.img})`, backgroundSize: 'cover' }}
-                     className='h-[400px] pl-10 pt-10 pb-16 '>
+                    <SwiperSlide key={e.id} 
+                    style={{ backgroundImage: `url(${e.bg})`, backgroundSize: 'cover' }}
+                     className='h-[400px] pl-10 pt-10 pb-16 flex relative  '>
                         {/* left */}
                         <div className={`${e.class}`}>
                           <h2 className='text-[50px] font-semibold text-white leading-[50px] mb-5'>{e.title}</h2>
@@ -48,6 +48,10 @@ const Hero = () => {
                              <p className='text-base font-medium text-white mb-7'>{e.eslatma}</p>
                              <Link className='px-20 inline-block bg-sariq  py-4 rounded-lg'>Получить прайс</Link>
                           </div>
+                        </div>
+                        {/* right */}
+                        <div className='absolute top-0 right-0 '>
+                          <img className={`${e.class2}`} src={e.img} alt={e.title} />
                         </div>
                     </SwiperSlide>
                 )
