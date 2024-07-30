@@ -69,3 +69,33 @@ export const Carusel = [
         img:img3
     }
 ]
+
+
+// products report
+import telefon from '../imgs/productsreport/telefon.svg'
+import whatsapp from '../imgs/productsreport/whatsapp.svg'
+import ikra from '../imgs/productsreport/ikra.svg'
+import mashina from '../imgs/productsreport/mashina.svg'
+
+export const ProductsReport = [
+    {
+        id:1,
+        title:`Чат-бот цен на все наши продукты питания`,
+        sharx:`Узнайте наши цены за пару секунд без писем и звонков менеджеру`,
+        img:telefon,
+        btn:whatsapp,
+    },
+    {
+        id:2,
+        title:`Лосось охлажденный`,
+        sharx:`Акционная цена 1700 ₽ / кг`,
+        img:ikra,
+        btn:`до 31.12.2023 г.`,
+    },
+    {
+        id:3,
+        title:`Доставка в день заказа`,
+        sharx:`Закажите до 11.00`,
+        img:mashina    
+    }
+]
