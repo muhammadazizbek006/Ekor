@@ -39,7 +39,7 @@ const Hero = () => {
                     
                     <SwiperSlide key={e.id} 
                     style={{ backgroundImage: `url(${e.bg})`, backgroundSize: 'cover' }}
-                     className='h-[400px] pl-10 pt-10 pb-16 flex relative rounded-2xl  '>
+                     className='h-[400px] pl-10 pt-10 pb-16 flex relative rounded-2xl z-0  '>
                         {/* left */}
                         <div className={`${e.class}`}>
                           <h2 className='text-[50px] font-semibold text-white leading-[50px] mb-5'>{e.title}</h2>
@@ -50,8 +50,8 @@ const Hero = () => {
                           </div>
                         </div>
                         {/* right */}
-                        <div className='absolute top-0 right-0 '>
-                          <img className={`${e.class2}`} src={e.img} alt={e.title} />
+                        <div className={`${e.top} absolute top-0 -right-2 `}>
+                          <img className={`${e.class2} z-10  rounded-[55px] r ` } src={e.img} alt={e.title} />
                         </div>
                     </SwiperSlide>
                 )
