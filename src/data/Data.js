@@ -73,11 +73,11 @@ export const Carusel = [
 
 // products report
 import telefon from '../imgs/productsreport/telefon.svg'
-import whatsapp from '../imgs/productsreport/whatsapp.svg'
+import whatsapp from '../imgs/productsreport/whatsappm.svg'
 import ikra from '../imgs/productsreport/ikra.svg'
 import mashina from '../imgs/productsreport/mashina.svg'
-
-export const ProductsReport = [
+import goom from '../imgs/productsreport/godom.svg'
+export const Productsreport = [
     {
         id:1,
         title:`Чат-бот цен на все наши продукты питания`,
@@ -90,7 +90,7 @@ export const ProductsReport = [
         title:`Лосось охлажденный`,
         sharx:`Акционная цена 1700 ₽ / кг`,
         img:ikra,
-        btn:`до 31.12.2023 г.`,
+        btn:goom,
     },
     {
         id:3,
