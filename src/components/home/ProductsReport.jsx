@@ -18,7 +18,8 @@ const ProductsReport = () => {
                                 <p className='text-sm font-medium text-head leading-[18px] max-w-[181px]     '>{e.sharx}</p>
                             </div>
                             {/* bottom */}
-                            <div className='flex  items-center justify-between '>
+                            <div className='flex  items-center justify-between'>
+                                
                                 <button className=''>
                                     <img src={e.btn} alt="" />
                                 </button>
