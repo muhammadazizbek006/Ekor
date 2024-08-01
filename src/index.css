@@ -8,3 +8,10 @@
         @apply w-full max-w-[1160px] px-5 mx-auto
     }
 }
+
+@layer components {
+    .inputs{
+        @apply border border-input w-[444px] rounded-lg px-4 py-5
+    }
+}
+
