@@ -26,6 +26,7 @@ const HeroHill = () => {
 
           </div>
         </li>
+        
         {/* like shop va kirish */}
         <li className='flex items-center'>
           {/* like */}
