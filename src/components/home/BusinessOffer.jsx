@@ -8,7 +8,7 @@ const onChange = (value) => {
 
 const BusinessOffer = () => {
   return (
-    <section className="bg-offer ">
+    <section className="bg-offer bg-no-repeat  bg-cover pt-16 pb-28 ">
       <div className="containerb">
         <h2 className="text-40 font-semibold text-white text-center mb-10 leading-40">
           Получите индивидуальное коммерческое предложение для вашего бизнеса
