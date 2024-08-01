@@ -99,3 +99,70 @@ export const Productsreport = [
         img:mashina    
     }
 ]
+
+// // products report
+import pr1 from '../imgs/ProductsOffer/pr1.jpg'
+import pr2 from '../imgs/ProductsOffer/pr2.jpg'
+import pr3 from '../imgs/ProductsOffer/pr3.jpg'
+import pr4 from '../imgs/ProductsOffer/pr3.jpg'
+export const products = [
+    {
+        id:1,
+        img:pr1,
+        title:`Свежемороженая рыба`,
+        sharx:`Собственного производства и со всего мира`,
+    },
+    {
+        id:2,
+        img:pr2,
+        title:`Охлажденная рыба`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:3,
+        img:pr3,
+        title:`Замороженное мясо, птица`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:4,
+        img:pr4,
+        title:`Готовая продукция «Экор»`,
+        sharx:`Собственного производства `,
+    },
+
+]
+// products2
+import pr5 from '../imgs/ProductsOffer/pr5.png'
+import pr6 from '../imgs/ProductsOffer/pr6.png'
+import pr7 from '../imgs/ProductsOffer/pr7.png'
+import pr8 from '../imgs/ProductsOffer/pr8.png'
+
+export const products2 = [
+    {
+        id:1,
+        img:pr5,
+        title:`Креветки и морепродукты`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:2,
+        img:pr6,
+        title:`Рыбное филе`,
+        sharx:`Собственного производства и со всего мира`,
+    },
+    {
+        id:3,
+        img:pr7,
+        title:`Фасованная рыба`,
+        sharx:`Собственного производства`,
+    },
+    {
+        id:4,
+        img:pr8,
+        title:`Замороженные овощи и фрукты`,
+        sharx:`Со всего мира`,
+    },
+
+]
+
