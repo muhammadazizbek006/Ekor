@@ -5,7 +5,7 @@ import { Productsreport } from '../../data/Data'
 const ProductsReport = () => {
   return (
     <section className='mb-3'>
-        <div className="containerb">
+        <div className="containerb ">
         <ul className='grid grid-cols-3  gap-x-3  '>
             {
               Productsreport.map((e)=>{
