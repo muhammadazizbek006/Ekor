@@ -166,3 +166,37 @@ export const products2 = [
 
 ]
 
+// householdproducts
+
+import pr9 from '../imgs/ProductsOffer/pr9.jpg'
+import pr10 from '../imgs/ProductsOffer/pr10.jpg'
+import pr11 from '../imgs/ProductsOffer/pr11.jpg'
+import pr12 from '../imgs/ProductsOffer/pr12.jpg'
+
+
+export const householdproducts = [
+    {
+        id:1,
+        img:pr9,
+        title:`Масло и молочная продукция`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:2,
+        img:pr10,
+        title:`Бакалея и специи`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:3,
+        img:pr11,
+        title:`Масла растительные`,
+        sharx:`Со всего мира`,
+    },
+    {
+        id:4,
+        img:pr12,
+        title:`Майонезы и соусы`,
+        sharx:`Со всего мира`,
+    },
+]
