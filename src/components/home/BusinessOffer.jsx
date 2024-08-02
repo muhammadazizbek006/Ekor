@@ -78,10 +78,11 @@ const BusinessOffer = () => {
         {/* form */}
         <form
           onSubmit={handleSubmitInput}
-          className="bg-white p-10 rounded-[20px] flex   justify-between"
+          className="bg-white p-10 rounded-[20px] flex    justify-between"
         >
           {/* select */}
-          <div className="space-y-5 mr-5">
+          <div className="space-y-3 mr-5">
+            <h3 className="text-head text-2xl font-semibold mb-3" >по покупкам</h3>
             {/* Ваша ниша */}
             <div className="flex items-center">
               <span className="bg-head   text-white rounded-full mr-4 px-5 py-3 ">
