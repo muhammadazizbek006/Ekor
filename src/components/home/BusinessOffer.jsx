@@ -14,9 +14,9 @@ const BusinessOffer = () => {
           Получите индивидуальное коммерческое предложение для вашего бизнеса
         </h2>
         {/* form */}
-        <form className="bg-white p-10 rounded-[20px]">
+        <form className="bg-white p-10 rounded-[20px] flex   justify-between">
           {/* select */}
-          <div className="space-y-4">
+          <div className="space-y-5 mr-5">
             {/* Ваша ниша */}
             <div className="flex items-center">
               <span className='bg-head   text-white rounded-full mr-4 px-5 py-3 '>1</span>
@@ -133,6 +133,38 @@ const BusinessOffer = () => {
                     },
                   ]}
                 />
+              </div>
+            </div>
+          </div>
+          {/* Контактные данные */}
+          <div>
+            <h3 className="text-head text-2xl font-semibold mb-3">Контактные данные</h3>
+            {/* inputs */}
+            <div className=" flex flex-col justify-between space-y-3">
+                 {/* Имя и Фамилия */}
+                 <div>
+                 <label className="mb-2 text-sm font-medium text-head" >Имя и Фамилия</label>
+                 <input className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light" type="text" placeholder="Имя и Фамилия" />
+                 </div>
+              
+                {/* Email */}
+                <div>
+                  <label className="mb-2 text-sm font-medium text-head" >Email</label>
+                  <input className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light" type="email" placeholder="Email" />
+                </div>
+
+              {/* Номер телефона */}
+              <div>
+                <label className="mb-2 text-sm font-medium text-head" >Номер телефона</label>
+                <input className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light" type="tel" placeholder="Номер телефона" />
+              </div>
+              {/* checkbox and btn */}
+              <div className="flex flex-col">
+                <div className="flex items-start mb-8">
+                  <input className="mr-3 w-5 h-6" type="checkbox" />
+                  <p className="text-xs font-medium text-gray">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</p>
+                </div>
+                <button className="bg-sariq py-3 textsm font-semibold rounded-lg text-head">Получить</button>
               </div>
             </div>
           </div>
