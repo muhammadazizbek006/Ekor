@@ -16,14 +16,16 @@ const BusinessOffer = () => {
         {/* form */}
         <form className="bg-white p-10 rounded-[20px]">
           {/* select */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             {/* Ваша ниша */}
-            <div className="flex">
-              {/* <span className='bg-head   text-white rounded-full mr-4 '>1</span> */}
+            <div className="flex items-center">
+              <span className='bg-head   text-white rounded-full mr-4 px-5 py-3 '>1</span>
+
               <div className="flex flex-col">
                 <label className="mb-1 text-sm font-medium text-head">
                   Ваша ниша
                 </label>
+
                 <Select
                 className=" w-[444px] rounded-lg "
                   showSearch
@@ -57,11 +59,12 @@ const BusinessOffer = () => {
                   ]}
                 />
               </div>
+
             </div>
 
             {/* Способ получения*/}
-            <div className="flex">
-              {/* <span className='bg-head   text-white rounded-full mr-4 '>1</span> */}
+            <div className="flex items-center">
+              <span className='bg-head   text-white rounded-full mr-4 px-5 py-3 '>2</span>
               <div className="flex flex-col">
                 <label className="mb-1 text-sm font-medium text-head">
                   Способ получения
@@ -101,8 +104,8 @@ const BusinessOffer = () => {
             </div>
 
             {/* Ваши объемы закупки */}
-            <div className="flex">
-              {/* <span className='bg-head   text-white rounded-full mr-4 '>1</span> */}
+            <div className="flex items-center">
+              <span className='bg-head   text-white rounded-full mr-4 px-5 py-3 '>3</span>
               <div className="flex flex-col">
                 <label className="mb-1 text-sm font-medium text-head">
                   Ваши объемы закупки
