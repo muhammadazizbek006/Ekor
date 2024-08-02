@@ -22,7 +22,10 @@ export default {
       },
       lineHeight:{
         '40':'40px'
-      }
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

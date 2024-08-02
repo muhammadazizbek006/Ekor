@@ -4,10 +4,10 @@ const ProductLi = ({ imageSrc, title, description }) => {
   return (
     <li className=''>
       <div>
-        <img src={imageSrc} alt={title} />
+        <img className='mb-4 rounded-lg' src={imageSrc} alt={title} />
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className='text-lg font-semibold text-head mb-1 leading-5 '>{title}</h3>
+      <p className='text-sm text-head font-medium'>{description}</p>
     </li>
   );
 };
