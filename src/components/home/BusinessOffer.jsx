@@ -27,9 +27,9 @@ const BusinessOffer = () => {
                 <Select
                 className=" w-[444px] rounded-lg "
                   showSearch
-                  placeholder="Select a person"
+                  placeholder="Оптовик"
                   
-                  optionFilterProp="label"
+                  
                   onChange={onChange}
                 
                   options ={[
@@ -38,13 +38,22 @@ const BusinessOffer = () => {
                       label: "Оптовик",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "Розничная торговля",
+                      label: "Розничная торговля",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "Дистрибьютор",
+                      label: "Дистрибьютор",
                     },
+                    {
+                      value: "Поставщик",
+                      label: "Поставщик",
+                    },
+                    {
+                      value: "Производитель",
+                      label: "Производитель",
+                    },
+                 
                   ]}
                 />
               </div>
@@ -60,23 +69,31 @@ const BusinessOffer = () => {
                 <Select
                 className=" w-[444px] rounded-lg "
                   showSearch
-                  placeholder="Select a person"
+                  placeholder="Доставка по МСК или МО"
                   
                   optionFilterProp="label"
                   onChange={onChange}
                 
                   options ={[
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "Курьерская доставка",
+                      label: "Курьерская доставка",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "Самовывоз",
+                      label: "Самовывоз",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "Доставка на почту",
+                      label: "Доставка на почту",
+                    },
+                    {
+                      value: "Доставка до двери",
+                      label: "Доставка до двери",
+                    },
+                    {
+                      value: "Пункты выдачи",
+                      label: "Пункты выдачи",
                     },
                   ]}
                 />
@@ -93,23 +110,23 @@ const BusinessOffer = () => {
                 <Select
                 className=" w-[444px] rounded-lg "
                   showSearch
-                  placeholder="Select a person"
+                  placeholder="от 10 000 ₽ до 25 000 ₽ "
                   
                   optionFilterProp="label"
                   onChange={onChange}
                 
                   options ={[
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "от 25 000 ₽ до 50 000 ₽",
+                      label: "от 25 000 ₽ до 50 000 ₽",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "от 50 000 ₽ до 100 000 ₽",
+                      label: "от 50 000 ₽ до 100 000 ₽",
                     },
                     {
-                      value: "Оптовик",
-                      label: "Оптовик",
+                      value: "более 100 000 ₽",
+                      label: "более 100 000 ₽",
                     },
                   ]}
                 />
