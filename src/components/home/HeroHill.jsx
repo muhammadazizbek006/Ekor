@@ -11,6 +11,7 @@ const HeroHill = () => {
     <section className='bg-head py-3 hidden md:block mb-5'>
       <ul className='containerb flex justify-between items-center'>
         {/* katalog va input */}
+        
         <li>
           {/* left katalog */}
           <div className='flex items-center '>
