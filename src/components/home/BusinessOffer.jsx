@@ -169,7 +169,7 @@ const BusinessOffer = () => {
             {/* Ваши объемы закупки */}
             <div className="flex items-center">
               <span className="bg-head   text-white rounded-full mr-4 px-5 py-3 ">
-                3
+                
               </span>
               <div className="flex flex-col">
                 <label className="mb-1 text-sm font-medium text-head">
