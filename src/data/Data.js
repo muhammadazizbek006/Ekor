@@ -200,3 +200,43 @@ export const householdproducts = [
         sharx:`Со всего мира`,
     },
 ]
+
+
+// BusinessMaterials
+
+import bm1 from '../imgs/BusinessMaterials/bm1.svg'
+import bm2 from '../imgs/BusinessMaterials/bm2.svg'
+import bm3 from '../imgs/BusinessMaterials/bm3.svg'
+import bm4 from '../imgs/BusinessMaterials/bm4.svg'
+
+
+export const businessmaterials = [
+    {
+        id:1,
+        img:bm1,
+        raqam:`01`,
+        title:`Торговые сети и магазины «У дома»`,
+
+    },
+    {
+        id:2,
+        img:bm2,
+        raqam:`02`,
+        title:`Рестораны, кафе и столовые`,
+
+    },
+    {
+        id:3,
+        img:bm3,
+        raqam:`03`,
+        title:`Оптовикам и прозводителям`,
+
+    },
+    {
+        id:4,
+        img:bm4,
+        raqam:`04`,
+        title:`HoReCa`,
+
+    },
+]
