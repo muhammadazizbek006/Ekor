@@ -96,7 +96,7 @@ const BusinessOffer = () => {
 
                 <Select
                   className=" w-[444px] rounded-lg "
-                  showSearch
+                  
                   placeholder="Оптовик"
                   onChange={onChange}
                   options={[
@@ -136,7 +136,7 @@ const BusinessOffer = () => {
                 </label>
                 <Select
                   className=" w-[444px] rounded-lg "
-                  showSearch
+                  
                   placeholder="Доставка по МСК или МО"
                   optionFilterProp="label"
                   onChange={onChange}
@@ -177,7 +177,7 @@ const BusinessOffer = () => {
                 </label>
                 <Select
                   className=" w-[444px] rounded-lg "
-                  showSearch
+                  
                   placeholder="от 10 000 ₽ до 25 000 ₽ "
                   optionFilterProp="label"
                   onChange={onChange}
