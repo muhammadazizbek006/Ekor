@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       colors:{
-        'head':'#203686',
+        'head':'#203686 ',
         'gray':'#70798E',
         'sariq':'#FFED32',
         'input':'#DDE1E6',
+        'special':'#20368633'
       },
 
       backgroundImage: {

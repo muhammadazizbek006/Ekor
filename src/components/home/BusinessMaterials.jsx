@@ -3,7 +3,7 @@ import { businessmaterials } from '../../data/Data';
 
 const BusinessMaterials = () => {
   return (
-    <section className='pt-20'>
+    <section className='py-20'>
       <div className="containerb">
         <h2 className='text-40 font-semibold leading-40 text-head text-center mb-10'>
           Мы специализируемся на поставках для различных сфер бизнеса
