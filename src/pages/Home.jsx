@@ -9,6 +9,7 @@ import HouseholdProducts from '../components/home/HouseholdProducts'
 import BusinessMaterials from '../components/home/BusinessMaterials'
 import SpecialOffers from '../components/home/SpecialOffers'
 import OurAttentionMatters from '../components/home/OurAttentionMatters'
+import Subscribe from '../components/home/Subscribe'
 const Home = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const Home = () => {
       <BusinessMaterials/>
       <SpecialOffers/>
       <OurAttentionMatters/>
+      <Subscribe/>
     </>
   )
 }

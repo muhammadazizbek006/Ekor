@@ -11,11 +11,16 @@ export default {
         'gray':'#70798E',
         'sariq':'#FFED32',
         'input':'#DDE1E6',
-        'special':'#20368633'
+        'special':'#20368633',
+        'yashil':'#4ADD47',
+        'kok':'#2AABEE',
+        'week':'#1877F2',
       },
 
       backgroundImage: {
         'offer': "url('/src/imgs/BusinessOffer/offerbg.png')",
+        'Subscribe': "url('/src/imgs/Subscribe/bg.png')",
+
 
       },
       fontSize:{
