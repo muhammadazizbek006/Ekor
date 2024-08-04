@@ -337,14 +337,3 @@ export const ourattentionmatters = [
     },
 
 ]
-
-
-// .area-1 { grid-area: a; }
-// .area-2 { grid-area: b; }
-// .area-3 { grid-area: c; }
-// .area-4 { grid-area: d; }
-// .area-5 { grid-area: e; }
-// .area-6 { grid-area: f; }
-// .area-7 { grid-area: g; }
-// .area-8 { grid-area: h; }
-// .area-9 { grid-area: i; }
