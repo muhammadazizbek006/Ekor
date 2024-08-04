@@ -16,7 +16,7 @@ const SpecialOffers = () => {
   {/* right */}
   <div className='flex justify-between w-full'>
     <p className='text-lg font-semibold text-head max-w-[384px]'>{e.savol}</p>
-    <p className='max-w-[351px] text-sm font-medium text-gray'>{e.javob}</p>
+    <p className='max-w-[351px] text-sm font-medium text-head'>{e.javob}</p>
   </div>
 </li>
 
