@@ -5,15 +5,16 @@ const OurAttentionMatters = () => {
   return (
     <section className='py-20'>
       <div className="containerb">
-        <h2 className='text-40 text-center font-semibold leading-40 text-head'>
+        <h2 className='text-40 text-center font-semibold leading-40 text-head mb-10'>
           Наш опыт и репутация — <br /> это самое главное
         </h2>
-        <ul className="grid gap-6 mt-10 custom-grid">
-          {ourattentionmatters.map((e, index) => {
+        <ul className="grid gap-5  custom-grid">
+          {ourattentionmatters.map((e) => {
             return (
-              <li key={index} className="bg-white p-6 rounded shadow">
-                <h3 className="text-24 font-semibold mb-2">{e.title}</h3>
-                <p className="text-16">{e.description}</p>
+              <li key={e.id} className="bg-white flex flex-col justify-between min-h-60 p-6 rounded-[20px] shadow">
+                <span className='text-xs font-medium text-head'>{e.raqam}</span>
+                <h3 className="text-2xl font-semibold  text-head">{e.title}</h3>
+                <p className="text-sm font-medium text-gray">{e.sharx}</p>
               </li>
             );
           })}
