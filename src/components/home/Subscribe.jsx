@@ -7,18 +7,18 @@ import week from '../../imgs/Subscribe/week.svg'
 
 const Subscribe = () => {
   return (
-    <section className='bg-Subscribe bg-no-repeat  bg-cover py-10'>
-        <div className="containerb flex relative">
+    <section className='pb-20'>
+        <div className="containerb flex relative bg-Subscribe bg-no-repeat  bg-cover py-10 h-[540px] z-50 overflow-hidden">
         {/* left */}
-        <div className=''>
+        <div className=' '>
             {/* title and decreption */}
-            <div>
-                <h2 className='text-white text-6xl font-semibold'>Подписывайтесь на чат-бот оптовых цен</h2>
-                <p className='text-lg font-semibold text-white'>Узнайте наши цены за пару секунд через наш чат-бот без писем и звонков менеджеру</p>
+            <div className='mb-24'>
+                <h2 className='text-white text-6xl font-semibold leading-54 max-w-[603px] mb-5'>Подписывайтесь на чат-бот оптовых цен</h2>
+                <p className='text-lg font-semibold text-white max-w-[322px]'>Узнайте наши цены за пару секунд через наш чат-бот без писем и звонков менеджеру</p>
             </div>
             {/* online */}
             <div >
-                <div className='flex space-x-3'>
+                <div className='flex space-x-3 mb-5'>
                     <a className='py-4 px-6 bg-yashil flex items-center rounded-lg'  href="">
                         <img className='mr-2' src={whatsapp} alt="whatsapp" />
                         <p className='text-base text-white '>+7 ( _ _ _ ) _ _ _ – _ _ – _ _</p>
@@ -34,15 +34,15 @@ const Subscribe = () => {
                     </a>
 
                 </div>
-                <div className='flex'>
+                <div className='flex max-w-[373px] space-x-3 items-start'>
                     <input type="checkbox" />
                     <p className='text-xs font-medium text-white'>Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности ресурса</p>
                 </div>
             </div>
         </div>
         {/* right */}
-        <div className=' '>
-            <img className='absolute right-96  -top-20' src={phone} alt="" />
+        <div className='absolute -right-56  top-2 z-0 '>
+            <img className='' src={phone} alt="" />
         </div>
         </div>
     </section>

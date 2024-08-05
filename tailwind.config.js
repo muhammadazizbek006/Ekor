@@ -27,7 +27,8 @@ export default {
         '40':'40px'
       },
       lineHeight:{
-        '40':'40px'
+        '40':'40px',
+        '54':'54px'
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
