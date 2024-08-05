@@ -11,6 +11,7 @@ import SpecialOffers from '../components/home/SpecialOffers'
 import OurAttentionMatters from '../components/home/OurAttentionMatters'
 import Subscribe from '../components/home/Subscribe'
 import ReviewsFromOurCustomers from '../components/home/ReviewsFromOurCustomers'
+import RequestForCooperation from '../components/home/RequestForCooperation'
 const Home = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const Home = () => {
       <OurAttentionMatters/>
       <Subscribe/>
       <ReviewsFromOurCustomers/>
+      <RequestForCooperation/>
     </>
   )
 }
