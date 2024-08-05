@@ -10,6 +10,7 @@ import BusinessMaterials from '../components/home/BusinessMaterials'
 import SpecialOffers from '../components/home/SpecialOffers'
 import OurAttentionMatters from '../components/home/OurAttentionMatters'
 import Subscribe from '../components/home/Subscribe'
+import ReviewsFromOurCustomers from '../components/home/ReviewsFromOurCustomers'
 const Home = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const Home = () => {
       <SpecialOffers/>
       <OurAttentionMatters/>
       <Subscribe/>
+      <ReviewsFromOurCustomers/>
     </>
   )
 }
