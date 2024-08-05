@@ -12,6 +12,7 @@ const RequestForCooperation = () => {
         {/* right */}
         <form className="w-[506px] ">
           <h2 className="text-40 text-head leading-40 font-semibold mb-5">
+            
             Оставьте заявку на сотрудничество
           </h2>
           <div className=" flex flex-col justify-between space-y-3">
