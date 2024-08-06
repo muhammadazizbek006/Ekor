@@ -15,6 +15,7 @@ export default {
         'yashil':'#4ADD47',
         'kok':'#2AABEE',
         'week':'#1877F2',
+        'foot':'#F4F7FB'
       },
 
       backgroundImage: {

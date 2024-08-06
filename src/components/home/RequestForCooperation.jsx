@@ -3,7 +3,7 @@ import React from "react";
 import sorov from "../../imgs/RequestForCooperation/sorov.png";
 const RequestForCooperation = () => {
   return (
-    <section className="containerb">
+    <section className="containerb pb-10">
       <div className="  flex space-x-10 bg-white items-center h-[516px] relative  rounded-2xl">
         {/* left */}
         <div className="">
