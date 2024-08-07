@@ -28,7 +28,7 @@ const Header = () => {
                 <li className='text-head space-x-3 lg:space-x-4 hidden md:inline-block  md:text-xs lg:text-sm font-semibold '>
                     {
                         links.map((e) => (
-                            <Link to={e.URL} key={e.id}>{e.title}</Link>
+                            <Link key={e.id} to={e.URL} >{e.title}</Link>
                         ))
                     }
                 </li>

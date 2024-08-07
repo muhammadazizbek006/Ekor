@@ -25,7 +25,9 @@ export default {
 
       },
       fontSize:{
-        '40':'40px'
+        '40':'40px',
+        '50':'50px'
+
       },
       lineHeight:{
         '40':'40px',

@@ -28,7 +28,7 @@ export const links = [
     {
         id:6,
         title:`О компании `,
-        URL:'/О компании ',
+        URL:'/AboutTheCompany ',
     },
 ]
 
