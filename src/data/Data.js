@@ -23,12 +23,12 @@ export const links = [
     {
         id:5,
         title:`Контакты`,
-        URL:'/Контакты',
+        URL:'/contact',
     },
     {
         id:6,
         title:`О компании `,
-        URL:'/AboutTheCompany ',
+        URL:'/AboutTheCompany',
     },
 ]
 
