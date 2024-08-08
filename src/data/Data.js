@@ -337,3 +337,31 @@ export const ourattentionmatters = [
     },
 
 ]
+
+
+// ekop natijalari xaqida
+
+
+export const  advantages = [
+    {
+        id:1,
+        advantage:`25 лет`,
+        eslatma:`опыта работы`,
+    },
+    {
+        id:2,
+        advantage:`> 40 `,
+        eslatma:`автомобилей для доставки`,
+    },
+    {
+        id:3,
+        advantage:`> 100 `,
+        eslatma:`сотрудников`,
+    },
+    {
+        id:4,
+        advantage:`> 3000 `,
+        eslatma:`постоянных клиентов`,
+    },
+
+]
