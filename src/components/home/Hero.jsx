@@ -17,7 +17,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Carusel } from '../../data/Data';
 const Hero = () => {
   return (
-    <section className='mb-3'>
+    <section className='mb-12'>
         <div className="containerb">
         <Swiper
         spaceBetween={30}

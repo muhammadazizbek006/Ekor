@@ -27,7 +27,7 @@ const Home = () => {
       <OurAttentionMatters/>
       <Subscribe/>
       <ReviewsFromOurCustomers/>
-      <RequestForCooperation/>
+
     </>
   )
 }
