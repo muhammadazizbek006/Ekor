@@ -418,3 +418,30 @@ export const  advantages = [
     },
 
 ]
+
+
+// location
+
+const locations = [
+    {
+      name: 'Центральный офис',
+      address: 'г. Москва, Открытое шоссе, 13, стр. 1',
+      phone: '+7 (495) 688-72-28',
+    },
+    {
+      name: 'Склад отгрузки',
+      address: 'г. Москва, ул. 2-я Кабельная, 2с5',
+      phone: '+7 (495) 688-72-28',
+    },
+    {
+      name: 'Склад отгрузки Ленинградская область',
+      address: 'Ленинградская область, Ломоносовский район, Виллозское городское поселение, Южная часть производственной зоны Горелово, 1-й квартал, 1',
+      phone: '+7 (495) 688-72-28',
+      mapLink: 'https://yandex.uz/maps/10174/saint-petersburg-and-leningrad-oblast/house/yuzhnaya_chast_proizvodstvennoy_zony_gorelovo_1_y_kvartal_1/Z0kYdwBiT0MPQFtjfXt4cXVqZg==/?azimuth=6.251892732544029&ll=59.386083%2C46.161051&z=3.55'
+    },
+    {
+      name: 'Производство',
+      address: 'Московская область, Балашиха, деревня Черное, Черногрязская улица, д. 76',
+      phone: '+7 (495) 688-72-28',
+    },
+  ];
