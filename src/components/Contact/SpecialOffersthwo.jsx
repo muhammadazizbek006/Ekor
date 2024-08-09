@@ -11,6 +11,7 @@ const SpecialOffersthwo = () => {
           specialoffers2.map((e)=>{
             return(
               <SpecialoffersComponent
+              q
                 key={e.id}
                 raqam={e.raqam}
                 savol={e.savol}
