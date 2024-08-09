@@ -2,9 +2,11 @@ import React from 'react';
 
 const MapComponent = () => {
   return (
-    <div>
-        
-    </div>
+        <section>
+            <div className="containerb">
+                
+            </div>
+        </section>
   );
 };
 
