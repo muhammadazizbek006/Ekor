@@ -284,6 +284,59 @@ export const specialoffers = [
 ]
 
 
+export const specialoffers2 = [
+
+    {
+        id:1,
+        raqam:`01`,
+        savol:`Юридическое название`,
+        javob:`ООО «ПТК ЭКОР»`,
+    },
+
+    {
+        id:2,
+        raqam:`02`,
+        savol:`ИНН`,
+        javob:`7718741865`,
+    },
+
+    {
+        id:3,
+        raqam:`03`,
+        savol:`КПП`,
+        javob:`772201001`,
+    },
+
+    {
+        id:4,
+        raqam:`04`,
+        savol:`Банк`,
+        javob:`Филиал «Центральный» банка ВТБ (ПАО)`,
+    },
+
+    {
+        id:5,
+        raqam:`05`,
+        savol:`БИК`,
+        javob:`044525411`,
+    },
+
+    {
+        id:6,
+        raqam:`06`,
+        savol:`р/с `,
+        javob:`40702810000000134655`,
+    },
+    
+    {
+        id:7,
+        raqam:`07`,
+        savol:`к/с `,
+        javob:`30101810145250000411`,
+    },
+]
+
+
 // Our Attention Matters
 
 export const ourattentionmatters = [
