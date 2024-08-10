@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import { deliveryData } from '../../data/Data';
 
 const DeliveryConditions = () => {
   return (
@@ -10,14 +10,14 @@ const DeliveryConditions = () => {
           Условия доставки, стоимости <br /> и возврата товара
         </h2>
         <div className="mt-10 space-y-6">
-          {deliveryData.map((item, index) => (
-            <div key={index} className="bg-white p-6 shadow-lg rounded-lg flex items-start">
-              <div className="flex-shrink-0 bg-blue-100 p-4 rounded-full">
-                <img src={`/path/to/icons/${item.icon}`} alt={item.title} className="w-6 h-6" />
+          {deliveryData.map((e) => (
+            <div key={e.id} className="bg-white p-6 shadow-lg rounded-lg flex items-start">
+              <div className="flex-shrink-0 bg-blue-100 p-4 rounded-full mr-4">
+                <img src={e.icon} alt={e.title} className="w-6 h-6" />
               </div>
-              <div className="ml-4">
-                <h3 className='text-18 font-semibold mb-2'>{item.title}</h3>
-                <p className='text-16 text-gray-700'>{item.description}</p>
+              <div className="">
+                <h3 className='text-lg text-head  font-semibold mb-2'>{e.title}</h3>
+                <p className='text-sm font-medium text-gray'>{e.description}</p>
               </div>
             </div>
           ))}
