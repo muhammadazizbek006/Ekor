@@ -478,3 +478,43 @@ export const delivery = [
         title:`GPS мониторинг ваших заказов на карте `
     },
 ]
+
+//\/\/\/\/\/\\/\/\/\/   
+import minimal from '../imgs/DeliveryConditions/minimal.svg'
+import dostavkapuli from '../imgs/DeliveryConditions/dostavkapuli.svg'
+import qaytarish from '../imgs/DeliveryConditions/qaytarish.svg'
+import vaqt from '../imgs/DeliveryConditions/vaqt.svg'
+import tushirish from '../imgs/DeliveryConditions/tushirish.svg'
+
+export const deliveryData = [
+    {
+        id:1,
+        icon: minimal, // Icon nomini kiritishingiz kerak
+        title: 'Минимальная сумма заказа',
+        description: 'Минимальная сумма заказа для юридических лиц и индивидуальных предпринимателей: 12 000 ₽ Не работаем с физическими лицами.'
+    },
+    {
+        id:2,
+        icon: vaqt, // Icon nomini kiritishingiz kerak
+        title: 'Срок доставки',
+        description: 'Доставка осуществляется ежедневно кроме выходных дней. В периоды длительных праздников, доставка осуществляется по заранее согласованному графику. Для Москвы и Московской области, если заказ сделан и подтверждён до 16–30 текущего дня, то доставка будет осуществлена на следующий рабочий день. Возможна доставка в день заказа по согласованию с менеджером. Для отдельных городов Московской области и других областей сроки доставки согласовываются с менеджером. Отслеживание заказов в режиме реального времени через онлайн-мониторинг. Автомобили имеют gps трекеры.'
+    },
+    {
+        id:3,
+        icon: tushirish, // Icon nomini kiritishingiz kerak
+        title: 'Разгрузка товара',
+        description: 'Наш водитель-экспедитор подает товар на борт автомобиля. Другие варианты можно обсудить с Вашим менеджером.'
+    },
+    {
+        id:4,
+        icon: dostavkapuli, // Icon nomini kiritishingiz kerak
+        title: 'Стоимость доставки',
+        description: 'На сайте указаны базовые мелкооптовые цены с учётом доставки по Москве и области, т. е. доставка бесплатная. Другие типы цен, с учетом суммы заказа, отсрочки платежа, и условия доставки доступны после регистрации на сайте.'
+    },
+    {
+        id:5,
+        icon:qaytarish, // Icon nomini kiritishingiz kerak
+        title: 'Возврат товара',
+        description: 'Целые упаковки товара с неповрежденной упаковкой, для которых соблюдался температурный режим, принимаются без объяснения причин после согласования логистики с Вашим менеджером.'
+    },
+  ];
