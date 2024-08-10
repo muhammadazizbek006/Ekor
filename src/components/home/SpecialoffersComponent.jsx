@@ -6,6 +6,7 @@ const SpecialoffersComponent = ({id, raqam, savol, javob}) => {
         <li className='flex items-center border-y border-special py-4 space-x-[250px]' key={id}>
                 {/* left */}
                 <span className='text-xs font-medium text-gray'>{raqam}</span>
+                
                 {/* right */}
                 <div className='flex justify-between   w-full'>
                   <p className='text-lg font-semibold text-head max-w-[384px]'>{savol}</p>
