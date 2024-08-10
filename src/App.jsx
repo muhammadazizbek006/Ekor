@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout'
 import Home from './pages/Home'
 import AboutTheCompany from './pages/AboutTheCompany'
 import Contact from './pages/Contact'
+import Delivery from './pages/Delivery'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -12,6 +13,7 @@ const App = () => {
         <Route index element={<Home/>}/>
         <Route path='/AboutTheCompany' element={<AboutTheCompany/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/Delivery' element={<Delivery/>}/>
       </Route>
     )
   )

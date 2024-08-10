@@ -3,7 +3,7 @@ export const links = [
     {
         id:1,
         title:`Доставка`,
-        URL:'/Доставка',
+        URL:'/Delivery',
     },
     {
         id:2,
@@ -453,3 +453,28 @@ export const locations = [
       ifream:'https://yandex.uz/maps/1/moscow-and-moscow-oblast/house/chernorechenskaya_ulitsa_73s1/Z0EYdgBkS0YGQFtvfXt1cHtibA==/?ll=38.780041%2C51.255993&z=4.11'
     },
   ];
+
+
+//   delivery
+
+import dy1 from '../imgs/Delivery/dy1.png'
+import dy2 from '../imgs/Delivery/dy2.png'
+import dy3 from '../imgs/Delivery/dy3.png'
+
+export const delivery = [
+    {
+        id:1,
+        img:dy1,
+        title:`Доставляем до 50 кг  по Москве и области`
+    },
+    {
+        id:2,
+        img:dy2,
+        title:`Доставляем на следующий день после приема заказа`
+    },
+    {
+        id:3,
+        img:dy3,
+        title:`GPS мониторинг ваших заказов на карте `
+    },
+]
