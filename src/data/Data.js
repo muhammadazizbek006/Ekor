@@ -18,7 +18,7 @@ export const links = [
     {
         id:4,
         title:`Оплата`,
-        URL:'/Оплата',
+        URL:'/Payment',
     },
     {
         id:5,

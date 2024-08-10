@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import AboutTheCompany from './pages/AboutTheCompany'
 import Contact from './pages/Contact'
 import Delivery from './pages/Delivery'
+import Payment from './pages/Payment'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -14,6 +15,7 @@ const App = () => {
         <Route path='/AboutTheCompany' element={<AboutTheCompany/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/Delivery' element={<Delivery/>}/>
+        <Route path='/Payment' element={<Payment/>}/>
       </Route>
     )
   )
