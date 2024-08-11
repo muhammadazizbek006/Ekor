@@ -541,3 +541,10 @@ export const process = [
         title:`Работаем по системе безопасности пищевой продукции HASP ISO 2001`
     },
 ]
+
+
+// maxsulotlarni datasi
+
+export const  seafood = [ {
+    id:1,
+} ]
