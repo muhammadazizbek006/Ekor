@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Subscribe from "../components/home/Subscribe";
+import SpecialOffersthwo from "../components/Contact/SpecialOffersthwo";
 
 const Payment = () => {
   
@@ -11,43 +13,47 @@ const Payment = () => {
   const [activeTab, setActiveTab] = useState(data[0].id);
 
   return (
-    <section>
+    <>
+      {/* <section>
 
-        <div className="containerb">
-              <ul className="flex">
-                {data.map((tab) => {
-                  return (
-                    <li
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`p-5 cursor-pointer ${
-                        activeTab === tab.id ? "bg-white" : "bg-foot"
-                      }`}
-                    >
-                      {tab.tabTitle}
-                    </li>
-                  );
-                })}
-              </ul>
+          <div className="containerb">
+                <ul className="flex">
+                  {data.map((tab) => {
+                    return (
+                      <li
+                        key={tab.id}
+                        onClick={() => setActiveTab(tab.id)}
+                        className={`p-5 cursor-pointer ${
+                          activeTab === tab.id ? "bg-white" : "bg-foot"
+                        }`}
+                      >
+                        {tab.tabTitle}
+                      </li>
+                    );
+                  })}
+                </ul>
 
-              <div>
-                {data.map((tab) => {
-                  return (
-                    <li
-                      key={tab.id}
-                      className={`p-5 cursor-pointer ${
-                        activeTab === tab.id ? "bg-green-600 p-5" : "hidden"
-                      }`}
-                    >
-                      {tab.tabContent}
-                    </li>
-                  );
-                })}
-              </div>
+                <div>
+                  {data.map((tab) => {
+                    return (
+                      <li
+                        key={tab.id}
+                        className={`p-5 cursor-pointer ${
+                          activeTab === tab.id ? "bg-green-600 p-5" : "hidden"
+                        }`}
+                      >
+                        {tab.tabContent}
+                      </li>
+                    );
+                  })}
+                </div>
 
-        </div>
+          </div>
 
-  </section>
+    </section> */}
+    <Subscribe/>
+    <SpecialOffersthwo/>
+    </>
   );
 };
 
