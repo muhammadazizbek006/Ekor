@@ -4,8 +4,8 @@ import ProductLi from './ProductLi';
 import { Link } from 'react-router-dom';
 const HouseholdProducts = () => {
   return (
-    <section>
-        <div className="containerb">
+    <section >
+        <div className="containerb mb-10">
         <ul className='grid grid-cols-4  gap-x-5'>
             {householdproducts.map((product, index) => (
               <Link>
