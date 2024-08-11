@@ -1,9 +1,10 @@
 import React from 'react'
 import Processing from '../components/Production/Processing'
 import arrow from '../imgs/Production/arrow.svg'
+import { Link } from 'react-router-dom';
 // data
 import { seafood } from '../data/Data';
-
+import like from '../imgs/Production/heart.svg'
 // material tailwind
 import {
   Accordion,
@@ -39,7 +40,7 @@ const Production = () => {
     <>
         <Processing/>
         <section>
-          <div className="containerb">
+          <div className="containerb flex justify-between">
             {/* left */}
             <div className="flex flex-col justify-start items-start space-y-5">
             {seafood.map((quiz, id) => {
@@ -73,7 +74,38 @@ const Production = () => {
                 </Accordion>
               );
             })}
-          </div>     
+          </div>
+           {/* right  */}
+           <ul className='grid grid-cols-3 gap-x-5 gap-y-10'>
+            {
+              seafood.map((e)=>{
+                return(
+                  <li>
+                    <button>
+                      <img src={like} alt="" />
+                    </button>
+                    <Link>
+                      <img src={e.img} alt="" />
+                      <div>
+                        <h3>{e.nameandinfo}</h3>
+                        <div>
+                          {/* left */}
+                          <div>
+                            <p>Дата выработки: </p>
+                            <p>{e.productiondate}</p>
+                          </div>
+                          <div>
+                            <p>Срок годности:  </p>
+                            <p>{e.Bestbeforedate}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                )
+              })
+            }
+           </ul>
           </div>
         </section>
     </>
