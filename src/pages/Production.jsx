@@ -70,7 +70,6 @@ const Production = () => {
   return (
     <>
       <Processing />
-      
       <section>
         <div className="containerb flex justify-between">
           {/* left draw filter */}
