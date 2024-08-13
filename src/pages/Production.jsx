@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Processing from "../components/Production/Processing";
 import arrow from "../imgs/Production/arrow.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 // data
 import { seafood } from "../data/Data";
 // img
 import like from "../imgs/Production/heart.svg";
 import minus from "../imgs/Production/minus.svg";
 import pilus from "../imgs/Production/pilus.svg";
-
+import likeactive from '../imgs/Production/like.svg'
 // material tailwind
 import {
   Accordion,
@@ -39,22 +38,34 @@ function Icon({ id, open }) {
 }
 
 import shop from "../imgs/Production/shop.svg";
+
 const Production = () => {
   const [open, setOpen] = React.useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
-  const [count, setCount] = useState(1);
+  // Create an object to hold the count for each product
+  const [counts, setCounts] = useState(
+    seafood.reduce((acc, item) => {
+      acc[item.id] = 1; // Initialize each product count to 1
+      return acc;
+    }, {})
+  );
 
-  const handleIncrease = () => {
-    setCount(count + 1);
+  const handleIncrease = (id) => {
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: prevCounts[id] + 1,
+    }));
   };
 
-  const handleDecrease = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
+  const handleDecrease = (id) => {
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: prevCounts[id] > 0 ? prevCounts[id] - 1 : 0,
+    }));
   };
+
   return (
     <>
       <Processing />
@@ -145,14 +156,14 @@ const Production = () => {
                   {/* counter */}
                   <div className="flex items-center justify-between mb-2">
                     <button
-                      onClick={handleDecrease}
+                      onClick={() => handleDecrease(e.id)}
                       className="   "
                     >
                       <img src={minus} alt="minus" />
                     </button>
-                    <span className="text-lg">{count} кг</span>
+                    <span className="text-lg">{counts[e.id]} кг</span>
                     <button
-                      onClick={handleIncrease}
+                      onClick={() => handleIncrease(e.id)}
                       className="  "
                     >
                       <img src={pilus} alt="pilus" />
