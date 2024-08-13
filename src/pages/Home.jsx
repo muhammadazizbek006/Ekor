@@ -12,11 +12,10 @@ import OurAttentionMatters from '../components/home/OurAttentionMatters'
 import Subscribe from '../components/home/Subscribe'
 import ReviewsFromOurCustomers from '../components/home/ReviewsFromOurCustomers'
 import RequestForCooperation from '../components/home/RequestForCooperation'
-import EfficientDelivery from '../components/home/EfficientDelivery'
 const Home = () => {
   return (
     <>
-    <EfficientDelivery/>
+    
       <HeroHill/>
       <Hero/>
       <ProductsReport/>

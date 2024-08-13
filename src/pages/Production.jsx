@@ -44,7 +44,7 @@ const Production = () => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const handleIncrease = () => {
     setCount(count + 1);
@@ -114,49 +114,53 @@ const Production = () => {
                         className="w-full rounded-md"
                       />
                     </div>
+                  {/* malumot */}
+                  <div className="  ">
+                      <h3 className="text-base text-head font-semibold mb-2">
+                        {e.nameandinfo}
+                      </h3>
 
-                    <h3 className="text-base text-head font-semibold mb-2">
-                      {e.nameandinfo}
-                    </h3>
+                      <div className="flex justify-between text-gray-500 text-sm">
+                        <div>
+                          <p className="text-gray font-medium text-xs">
+                            Дата выработки:
+                          </p>
+                          <p className="text-head font-medium text-xs">
+                            {e.productiondate}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-gray font-medium text-xs">
+                            Срок годности:
+                          </p>
+                          <p className="text-head font-medium text-xs">
+                            {e.Bestbeforedate}
+                          </p>
+                        </div>
+                      </div>
 
-                    <div className="flex justify-between text-gray-500 text-sm">
-                      <div>
-                        <p className="text-gray font-medium text-xs">
-                          Дата выработки:
-                        </p>
-                        <p className="text-head font-medium text-xs">
-                          {e.productiondate}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-gray font-medium text-xs">
-                          Срок годности:
-                        </p>
-                        <p className="text-head font-medium text-xs">
-                          {e.Bestbeforedate}
-                        </p>
-                      </div>
-                    </div>
+                  </div>
                   </Link>
+
                   {/* counter */}
-                  <div className="flex items-center justify-center space-x-4">
+                  <div className="flex items-center justify-between">
                     <button
                       onClick={handleDecrease}
-                      className="bg-gray-300 text-gray-700 px-4 py-2 rounded"
+                      className="   "
                     >
                       <img src={minus} alt="minus" />
                     </button>
-                    <span className="text-lg">{count}</span>
+                    <span className="text-lg">{count} кг</span>
                     <button
                       onClick={handleIncrease}
-                      className="bg-gray-300 text-gray-700 px-4 py-2 rounded"
+                      className="  "
                     >
                       <img src={pilus} alt="pilus" />
                     </button>
                   </div>
 
                   <div className=" flex justify-between items-center">
-                    
+
                     <div>
                       <p className="text-2xl  font-semibold text-head">{e.price} ₽</p>
                       <p className="text-xs text-gray-400 mt-1">
