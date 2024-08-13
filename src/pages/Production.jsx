@@ -9,6 +9,7 @@ import like from "../imgs/Production/heart.svg";
 import minus from "../imgs/Production/minus.svg";
 import pilus from "../imgs/Production/pilus.svg";
 import likeactive from '../imgs/Production/like.svg'
+import file from '../imgs/acardion/file.svg'
 // material tailwind
 import {
   Accordion,
@@ -71,40 +72,8 @@ const Production = () => {
       <Processing />
       <section>
         <div className="containerb flex justify-between">
-          {/* left */}
-          <div className="flex flex-col justify-start items-start space-y-5">
-            {seafood.map((quiz, id) => {
-              return (
-                <Accordion
-                  icon={
-                    <img
-                      src={arrow}
-                      className={`transition-transform duration-200 w-8  h-8 ${
-                        open == id ? "rotate-0" : "rotate-180"
-                      }`}
-                    />
-                  }
-                  className="border  bg-white overflow-hidden border-x-0 border-y-2 border-header border-dashed"
-                  key={id}
-                  open={open === id}
-                >
-                  <AccordionHeader
-                    className={` text-base md:text-xl px-4  items-start ${
-                      open == quiz.id ? "rounded-b-none" : ""
-                    }`}
-                    onClick={() => handleOpen(id)}
-                  >
-                    <div className="flex items-center space-x-2">
-                      {quiz.savol}
-                    </div>
-                  </AccordionHeader>
-                  <AccordionBody className="px-4 javob flex items-start ">
-                    {quiz.javob}
-                  </AccordionBody>
-                </Accordion>
-              );
-            })}
-          </div>
+
+
           {/* right  */}
           <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
             {seafood.map((e) => {

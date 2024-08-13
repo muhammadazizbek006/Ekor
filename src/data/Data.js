@@ -567,6 +567,9 @@ export const  seafood = [
     productquantity:500,
     price:1130.30,
     price2:`1130.30 ₽ / кг `,
+    file:`Филе горбуши`,
+    cteyk:`Стейк кеты`,
+
 }, 
 {
   id:2,
@@ -578,6 +581,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе горбуши`,
+  cteyk:`Стейк кеты`,
 }, 
 {
   id:3,
@@ -589,6 +594,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе горбуши`,
+  cteyk:`Стейк кеты`,
 }, 
 {
   id:4,
@@ -600,6 +607,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе кеты`,
+  cteyk:`Стейк сайды`,
 }, 
 {
   id:5,
@@ -611,6 +620,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе кеты`,
+  cteyk:`Стейк сайды`,
 }, 
 {
   id:6,
@@ -622,6 +633,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе минтая`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:7,
@@ -633,6 +646,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе минтая`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:8,
@@ -644,6 +659,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе палтуса`,
+  cteyk:`Стейк трески`,
 }, 
 {
   id:9,
@@ -655,6 +672,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе палтуса`,
+  cteyk:`Стейк трески`,
 }, 
 {
   id:10,
@@ -666,6 +685,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе палтуса`,
+  cteyk:`Стейк трески`,
 }, 
 {
   id:11,
@@ -677,6 +698,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе сайды`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:12,
@@ -688,6 +711,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:13,
@@ -699,6 +724,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:14,
@@ -710,6 +737,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:15,
@@ -721,6 +750,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:16,
@@ -732,6 +763,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:17,
@@ -743,6 +776,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе семги`,
+  cteyk:`Стейк форели`,
 }, 
 {
   id:18,
@@ -754,6 +789,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе форели`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:19,
@@ -765,6 +802,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе форели`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:20,
@@ -776,6 +815,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Стейк кеты`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:21,
@@ -787,6 +828,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Стейк кеты`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:22,
@@ -798,6 +841,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе хека`,
+  cteyk:`Стейк семги`,
 }, 
 {
   id:23,
