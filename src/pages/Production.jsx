@@ -106,7 +106,7 @@ const Production = () => {
                     <img src={like} alt="Like" />
                   </button>
 
-                  <Link to="/" className="block">
+                  <Link to="/" className="block mb-2">
                     <div className="bg-gray-100 p-2 mb-4">
                       <img
                         src={e.img}
@@ -143,7 +143,7 @@ const Production = () => {
                   </Link>
 
                   {/* counter */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mb-2">
                     <button
                       onClick={handleDecrease}
                       className="   "
