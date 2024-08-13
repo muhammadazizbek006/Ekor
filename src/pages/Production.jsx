@@ -80,11 +80,11 @@ const Production = () => {
             {
               seafood.map((e)=>{
                 return(
-                  <li>
-                    <button>
+                  <li className=' relative'>
+                    <button className='absolute  right-20 '>
                       <img src={like} alt="" />
                     </button>
-                    <Link>
+                    <Link className='bg-white'>
                       <img src={e.img} alt="" />
                       <div>
                         <h3>{e.nameandinfo}</h3>
