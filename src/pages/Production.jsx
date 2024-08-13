@@ -242,6 +242,7 @@ const Production = () => {
                         {e.price2} 
                       </p>
                     </div>
+                    
                     <button className="bg-sariq text-white p-3  rounded">
                       <img src={shop} alt="Add to Cart" />
                     </button>
