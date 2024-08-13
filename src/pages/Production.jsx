@@ -72,8 +72,103 @@ const Production = () => {
       <Processing />
       <section>
         <div className="containerb flex justify-between">
+          {/* left draw filter */}
+        <div>
+          
+        <div className="mb-12 hidden md:block">
+              <Accordion
+                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
+                open={open === 1}
+                icon={<Icon id={1} open={open} />}
+              >
+                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(1)}>
+                  Категории
+                </AccordionHeader>
+                <AccordionBody className="flex flex-col items-start space-y-5">
+                  {open === 1 &&
+                    seafood.map((e, index) => (
+                      <button
+                        className="text-sm font-medium"
+                        key={index}
+                        onClick={() => setSelectedCategory(e.file)}
+                      >
+                        {e.file}
+                      </button>
+                    ))}
+                </AccordionBody>
+              </Accordion>
+            </div>
 
+            <div className="mb-12 hidden md:block">
+              <Accordion
+                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
+                open={open === 2}
+                icon={<Icon id={2} open={open} />}
+              >
+                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(2)}>
+                  Размеры (EU)
+                </AccordionHeader>
+                <AccordionBody className="grid grid-cols-3 gap-3 mb-6">
+                  {open === 2 &&
+                    sizes.map((size, index) => (
+                      <button
+                        className="text-sm  font-medium rounded border  py-2"
+                        key={index}
+                        onClick={() => setSelectedSize(size)}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                </AccordionBody>
+              </Accordion>
+            </div>
 
+            <div className="mb-12 hidden md:block">
+              <Accordion
+                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
+                open={open === 3}
+                icon={<Icon id={3} open={open} />}
+              >
+                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(3)}>
+                  Брэнды
+                </AccordionHeader>
+                <AccordionBody className="flex flex-col space-y-5 items-start">
+                  {open === 3 &&
+                    brands.map((brand, index) => (
+                      <div onClick={() => setSelectedBrand(brand)} className="flex items-center" key={index}> 
+                          <input  className="mr-3 w-5 h-5" type="checkbox" />
+                          <label htmlFor="brand">{brand}</label>
+                      </div>
+
+                    ))}
+                </AccordionBody>
+              </Accordion>
+            </div>
+
+            <div className="mb-12 hidden md:block">
+              <Accordion
+                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
+                open={open === 4}
+                icon={<Icon id={4} open={open} />}
+              >
+                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(4)}>
+                  Цвета
+                </AccordionHeader>
+                <AccordionBody className="flex flex-col items-start">
+                  {open === 4 &&
+                    colors.map((color, index) => (
+                      <button
+                        className="text-sm font-medium mb-5"
+                        key={index}
+                        onClick={() => setSelectedColor(color)}
+                      >
+                        {color}
+                      </button>
+                    ))}
+                </AccordionBody>
+              </Accordion>
+            </div>
+        </div>
           {/* right  */}
           <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
             {seafood.map((e) => {
