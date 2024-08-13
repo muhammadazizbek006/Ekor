@@ -20,21 +20,20 @@ import {
 function Icon({ id, open }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className={`${
-        id === open ? "rotate-180" : ""
-      } h-5 w-5 transition-transform`}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-      />
-    </svg>
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth={2}
+  stroke="currentColor"
+  className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+  />
+</svg>
+
   );
 }
 
@@ -73,7 +72,7 @@ const Production = () => {
       <section>
         <div className="containerb flex justify-between">
           {/* left draw filter */}
-        <div>
+      <div>
           
         <div className="mb-12 hidden md:block">
               <Accordion
@@ -86,18 +85,18 @@ const Production = () => {
                 </AccordionHeader>
                 <AccordionBody className="flex flex-col items-start space-y-5">
                   {open === 1 &&
-                    seafood.map((e, index) => (
+                    uniqueFileTypes.map((e, index) => (
                       <button
                         className="text-sm font-medium"
                         key={index}
-                        onClick={() => setSelectedCategory(e.file)}
+                        onClick={() => setSelectedCategory(file)}
                       >
-                        {e.file}
+                        {file}
                       </button>
                     ))}
                 </AccordionBody>
               </Accordion>
-            </div>
+        </div>
 
             <div className="mb-12 hidden md:block">
               <Accordion
@@ -169,6 +168,7 @@ const Production = () => {
               </Accordion>
             </div>
         </div>
+
           {/* right  */}
           <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
             {seafood.map((e) => {
