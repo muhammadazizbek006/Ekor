@@ -9,6 +9,7 @@ import minus from "../imgs/Production/minus.svg";
 import pilus from "../imgs/Production/pilus.svg";
 import shop from "../imgs/Production/shop.svg";
 import steyk from '../imgs/acardion/file.svg'
+import likeactive from '../imgs/Production/likeactive.svg'
 // material tailwind
 import {
   Accordion,
@@ -38,6 +39,7 @@ function Icon({ id, open }) {
 const Production = () => {
   const [open, setOpen] = useState(0);
   const [files, setFiles] = useState([]);
+  const [likedProducts, setLikedProducts] = useState({});
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -76,7 +78,16 @@ const handleIncrease = (id) => {
   const filteredProducts = selectedCategory
     ? seafood.filter((item) => item.file === selectedCategory)
     : seafood;
-  
+  // like
+
+  const toggleLike = (product) => {
+    const updatedLikedProducts = {
+      ...likedProducts,
+      [product.id]: !likedProducts[product.id],
+    };
+    setLikedProducts(updatedLikedProducts);
+    dispatch(addProductToLike(product));
+  };
   return (
     <>
       <Processing />
@@ -124,8 +135,8 @@ const handleIncrease = (id) => {
                   className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
                   key={e.id}
                 >
-                  <button className="absolute top-3 right-3">
-                    <img src={like} alt="Like" />
+                  <button  onClick={() => toggleLike(e)} className="absolute top-3 right-3">
+                    <img src={likedProducts[e.id] ? likeactive : like} alt="Like" />
                   </button>
 
                   <Link to="/" className="block mb-2">
@@ -188,6 +199,7 @@ const handleIncrease = (id) => {
               );
             })}
           </ul>
+
         </div>
       </section>
     </>
