@@ -56,10 +56,21 @@ const Production = () => {
       [id]: prevCounts[id] > 0 ? prevCounts[id] - 1 : 0,
     }));
   };
+
+  
+  
   useEffect(() => {
     const Files = [...new Set(seafood.map((e) => e.file))];
     setFiles(Files);
   }, []);
+
+  // Miqdorni oshirish funktsiyasi
+const handleIncrease = (id) => {
+  setCounts((prevCounts) => ({
+    ...prevCounts,
+    [id]: prevCounts[id] + 1,
+  }));
+};
 
   // Filter the products based on the selected file type
   const filteredProducts = selectedCategory
