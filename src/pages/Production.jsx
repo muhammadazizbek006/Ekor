@@ -128,77 +128,84 @@ const handleIncrease = (id) => {
           </div>
 
           {/* right */}
-          <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
-            {filteredProducts.map((e) => {
-              return (
-                <li
-                  className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
-                  key={e.id}
-                >
-                  <button  onClick={() => toggleLike(e)} className="absolute top-3 right-3">
-                    <img src={likedProducts[e.id] ? likeactive : like} alt="Like" />
-                  </button>
+          <div className="flex flex-col">
+            <div className="flex items-center mb-5">
+            <h3 className="text-[32px] font-semibold text-head mr-3">Филе рыбы, стейки, фарш</h3>
+            <span className="text-sm font-medium text-gray ">{seafood.length} товара</span>
 
-                  <Link to="/" className="block mb-2">
-                    <div className="bg-gray-100 p-2 mb-4">
-                      <img
-                        src={e.img}
-                        alt={e.nameandinfo}
-                        className="w-full rounded-md"
-                      />
-                    </div>
-                    {/* malumot */}
-                    <div className="  ">
-                      <h3 className="text-base text-head font-semibold mb-2">
-                        {e.nameandinfo}
-                      </h3>
+            </div>
+            <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
+              {filteredProducts.map((e) => {
+                return (
+                  <li
+                    className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
+                    key={e.id}
+                  >
+                    <button  onClick={() => toggleLike(e)} className="absolute top-3 right-3">
+                      <img src={likedProducts[e.id] ? likeactive : like} alt="Like" />
+                    </button>
 
-                      <div className="flex justify-between text-gray-500 text-sm">
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Дата выработки:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.productiondate}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Срок годности:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.Bestbeforedate}
-                          </p>
+                    <Link to="/" className="block mb-2">
+                      <div className="bg-gray-100 p-2 mb-4">
+                        <img
+                          src={e.img}
+                          alt={e.nameandinfo}
+                          className="w-full rounded-md"
+                        />
+                      </div>
+                      {/* malumot */}
+                      <div className="  ">
+                        <h3 className="text-base text-head font-semibold mb-2">
+                          {e.nameandinfo}
+                        </h3>
+
+                        <div className="flex justify-between text-gray-500 text-sm">
+                          <div>
+                            <p className="text-gray font-medium text-xs">
+                              Дата выработки:
+                            </p>
+                            <p className="text-head font-medium text-xs">
+                              {e.productiondate}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="text-gray font-medium text-xs">
+                              Срок годности:
+                            </p>
+                            <p className="text-head font-medium text-xs">
+                              {e.Bestbeforedate}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
 
-                  {/* counter */}
-                  <div className="flex items-center justify-between mb-2">
-                    <button onClick={() => handleDecrease(e.id)} className="">
-                      <img src={minus} alt="minus" />
-                    </button>
-                    <span className="text-lg">{counts[e.id]} кг</span>
-                    <button onClick={() => handleIncrease(e.id)} className="">
-                      <img src={pilus} alt="pilus" />
-                    </button>
-                  </div>
-
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-2xl font-semibold text-head">{e.price} ₽</p>
-                      <p className="text-xs text-gray-400 mt-1">{e.price2}</p>
+                    {/* counter */}
+                    <div className="flex items-center justify-between mb-2">
+                      <button onClick={() => handleDecrease(e.id)} className="">
+                        <img src={minus} alt="minus" />
+                      </button>
+                      <span className="text-lg">{counts[e.id]} кг</span>
+                      <button onClick={() => handleIncrease(e.id)} className="">
+                        <img src={pilus} alt="pilus" />
+                      </button>
                     </div>
 
-                    <button className="bg-sariq text-white p-3 rounded">
-                      <img src={shop} alt="Add to Cart" />
-                    </button>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <p className="text-2xl font-semibold text-head">{e.price} ₽</p>
+                        <p className="text-xs text-gray-400 mt-1">{e.price2}</p>
+                      </div>
+
+                      <button className="bg-sariq text-white p-3 rounded">
+                        <img src={shop} alt="Add to Cart" />
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
         </div>
       </section>
