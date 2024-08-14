@@ -71,111 +71,126 @@ const Production = () => {
     <>
       <Processing />
       <section>
-        <div className="containerb flex justify-between">
+        <div className="containerb flex ">
           {/* left draw filter */}
-      <div>
-          
-        <div className="mb-12 hidden md:block">
-              <Accordion
-                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
-                open={open === 1}
-                icon={<Icon id={1} open={open} />}
-              >
-                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(1)}>
-                  Категории
-                </AccordionHeader>
-                <AccordionBody className="flex flex-col items-start space-y-5">
-                  {open === 1 &&
-                    uniqueFileTypes.map((e, index) => (
-                      <button
-                        className="text-sm font-medium"
-                        key={index}
-                        onClick={() => setSelectedCategory(file)}
-                      >
-                        {file}
-                      </button>
-                    ))}
-                </AccordionBody>
-              </Accordion>
-        </div>
-
-            <div className="mb-12 hidden md:block">
-              <Accordion
-                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
-                open={open === 2}
-                icon={<Icon id={2} open={open} />}
-              >
-                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(2)}>
-                  Размеры (EU)
-                </AccordionHeader>
-                <AccordionBody className="grid grid-cols-3 gap-3 mb-6">
-                  {open === 2 &&
-                    sizes.map((size, index) => (
-                      <button
-                        className="text-sm  font-medium rounded border  py-2"
-                        key={index}
-                        onClick={() => setSelectedSize(size)}
-                      >
-                        {size}
-                      </button>
-                    ))}
-                </AccordionBody>
-              </Accordion>
+          <div className="mr-8">
+              
+            <div className="mb-12">
+                  <Accordion
+                    className="w-[256px] border-2 rounded-md  border-[#E6E7EB]"
+                    open={open === 1}
+                    icon={<Icon id={1} open={open} />}
+                  >
+                    <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(1)}>
+                      Категории
+                    </AccordionHeader>
+                    <AccordionBody className="flex flex-col items-start space-y-5">
+                      {open === 1 &&
+                        uniqueFileTypes.map((e, index) => (
+                          <button
+                            className="text-sm font-medium"
+                            key={index}
+                            onClick={() => setSelectedCategory(file)}
+                          >
+                            {file}
+                          </button>
+                        ))}
+                    </AccordionBody>
+                  </Accordion>
             </div>
 
-            <div className="mb-12 hidden md:block">
-              <Accordion
-                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
-                open={open === 3}
-                icon={<Icon id={3} open={open} />}
-              >
-                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(3)}>
-                  Брэнды
-                </AccordionHeader>
-                <AccordionBody className="flex flex-col space-y-5 items-start">
-                  {open === 3 &&
-                    brands.map((brand, index) => (
-                      <div onClick={() => setSelectedBrand(brand)} className="flex items-center" key={index}> 
-                          <input  className="mr-3 w-5 h-5" type="checkbox" />
-                          <label htmlFor="brand">{brand}</label>
-                      </div>
-
-                    ))}
-                </AccordionBody>
-              </Accordion>
             </div>
-
-            <div className="mb-12 hidden md:block">
-              <Accordion
-                className="md:w-60 xl:w-[318px] border-2 rounded-md px-4 border-[#E6E7EB]"
-                open={open === 4}
-                icon={<Icon id={4} open={open} />}
-              >
-                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(4)}>
-                  Цвета
-                </AccordionHeader>
-                <AccordionBody className="flex flex-col items-start">
-                  {open === 4 &&
-                    colors.map((color, index) => (
-                      <button
-                        className="text-sm font-medium mb-5"
-                        key={index}
-                        onClick={() => setSelectedColor(color)}
-                      >
-                        {color}
-                      </button>
-                    ))}
-                </AccordionBody>
-              </Accordion>
-            </div>
-        </div>
 
           {/* right  */}
-          <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
+          {/* <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
             {seafood.map((e) => {
               return (
                 <li
                   className="relative bg-white rounded-lg p-4 w-72 shadow-lg"
+                  key={e.id}
+                >
+                  <button className="absolute top-3 right-3">
+                    <img src={like} alt="Like" />
+                  </button>
+
+                  <Link to="/" className="block mb-2">
+                    <div className="bg-gray-100 p-2 mb-4">
+                      <img
+                        src={e.img}
+                        alt={e.nameandinfo}
+                        className="w-full rounded-md"
+                      />
+                    </div> */}
+                  {/* malumot */}
+                  {/* <div className="  ">
+                      <h3 className="text-base text-head font-semibold mb-2">
+                        {e.nameandinfo}
+                      </h3>
+
+                      <div className="flex justify-between text-gray-500 text-sm">
+                        <div>
+                          <p className="text-gray font-medium text-xs">
+                            Дата выработки:
+                          </p>
+                          <p className="text-head font-medium text-xs">
+                            {e.productiondate}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-gray font-medium text-xs">
+                            Срок годности:
+                          </p>
+                          <p className="text-head font-medium text-xs">
+                            {e.Bestbeforedate}
+                          </p>
+                        </div>
+                      </div> */}
+
+                  {/* </div>
+                  </Link> */}
+
+                  {/* counter */}
+                  {/* <div className="flex items-center justify-between mb-2">
+                    <button
+                      onClick={() => handleDecrease(e.id)}
+                      className="   "
+                    >
+                      <img src={minus} alt="minus" />
+                    </button>
+                    <span className="text-lg">{counts[e.id]} кг</span>
+                    <button
+                      onClick={() => handleIncrease(e.id)}
+                      className="  "
+                    >
+                      <img src={pilus} alt="pilus" />
+                    </button>
+                  </div>
+
+                  <div className=" flex justify-between items-center">
+
+                    <div>
+                      <p className="text-2xl  font-semibold text-head">{e.price} ₽</p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {e.price2} 
+                      </p>
+                    </div>
+
+                    <button className="bg-sariq text-white p-3  rounded">
+                      <img src={shop} alt="Add to Cart" />
+                    </button>
+                  </div>
+
+                </li>
+              );
+            })}
+          </ul> */}
+
+
+  <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
+            {seafood.map((e) => {
+              return (
+                <li
+                  className="relative bg-white rounded-lg p-4 w-[264px] shadow-lg"
                   key={e.id}
                 >
                   <button className="absolute top-3 right-3">
