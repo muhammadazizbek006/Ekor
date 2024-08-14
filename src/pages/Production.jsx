@@ -8,7 +8,7 @@ import like from "../imgs/Production/heart.svg";
 import minus from "../imgs/Production/minus.svg";
 import pilus from "../imgs/Production/pilus.svg";
 import shop from "../imgs/Production/shop.svg";
-
+import steyk from '../imgs/acardion/file.svg'
 // material tailwind
 import {
   Accordion,
@@ -75,13 +75,20 @@ const Production = () => {
           <div className="mr-8">
             <div className="mb-12">
               <Accordion
-                className="w-[256px] border-2 rounded-md border-[#E6E7EB]"
+                className="w-[256px] "
                 open={open === 1}
                 icon={<Icon id={1} open={open} />}
               >
-                <AccordionHeader className="text-sm font-black" onClick={() => handleOpen(1)}>
-                  Категории
-                </AccordionHeader>
+                
+                <AccordionHeader className="flex items-center bg-white rounded-lg p-4 mb-2" onClick={() => handleOpen(1)}>
+                <div className="flex items-start">
+                <img  src={steyk} alt="steyk" className=" mr-2" />
+                <p className="text-sm font-semibold text-head leading-4">
+                  Филе рыбы, <br /> стейки, фарш
+                </p>
+                  </div>
+              </AccordionHeader>
+
                 <AccordionBody className="flex flex-col items-start space-y-5">
                   {open === 1 &&
                     files.map((file, index) => (
