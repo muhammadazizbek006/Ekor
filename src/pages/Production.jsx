@@ -86,7 +86,7 @@ const Production = () => {
                     </AccordionHeader>
                     <AccordionBody className="flex flex-col items-start space-y-5">
                       {open === 1 &&
-                        uniqueFileTypes.map((e, index) => (
+                        seafood.map((e, index) => (
                           <button
                             className="text-sm font-medium"
                             key={index}
@@ -102,172 +102,88 @@ const Production = () => {
             </div>
 
           {/* right  */}
-          {/* <ul className="grid grid-cols-3 gap-x-5 gap-y-10">
-            {seafood.map((e) => {
-              return (
-                <li
-                  className="relative bg-white rounded-lg p-4 w-72 shadow-lg"
-                  key={e.id}
-                >
-                  <button className="absolute top-3 right-3">
-                    <img src={like} alt="Like" />
-                  </button>
-
-                  <Link to="/" className="block mb-2">
-                    <div className="bg-gray-100 p-2 mb-4">
-                      <img
-                        src={e.img}
-                        alt={e.nameandinfo}
-                        className="w-full rounded-md"
-                      />
-                    </div> */}
-                  {/* malumot */}
-                  {/* <div className="  ">
-                      <h3 className="text-base text-head font-semibold mb-2">
-                        {e.nameandinfo}
-                      </h3>
-
-                      <div className="flex justify-between text-gray-500 text-sm">
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Дата выработки:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.productiondate}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Срок годности:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.Bestbeforedate}
-                          </p>
-                        </div>
-                      </div> */}
-
-                  {/* </div>
-                  </Link> */}
-
-                  {/* counter */}
-                  {/* <div className="flex items-center justify-between mb-2">
-                    <button
-                      onClick={() => handleDecrease(e.id)}
-                      className="   "
-                    >
-                      <img src={minus} alt="minus" />
+            <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
+              {seafood.map((e) => {
+                return (
+                  <li
+                    className="relative bg-white rounded-lg p-4 w-[264px] shadow-lg"
+                    key={e.id}
+                  >
+                    <button className="absolute top-3 right-3">
+                      <img src={like} alt="Like" />
                     </button>
-                    <span className="text-lg">{counts[e.id]} кг</span>
-                    <button
-                      onClick={() => handleIncrease(e.id)}
-                      className="  "
-                    >
-                      <img src={pilus} alt="pilus" />
-                    </button>
-                  </div>
 
-                  <div className=" flex justify-between items-center">
+                    <Link to="/" className="block mb-2">
+                      <div className="bg-gray-100 p-2 mb-4">
+                        <img
+                          src={e.img}
+                          alt={e.nameandinfo}
+                          className="w-full rounded-md"
+                        />
+                      </div>
+                    {/* malumot */}
+                    <div className="  ">
+                        <h3 className="text-base text-head font-semibold mb-2">
+                          {e.nameandinfo}
+                        </h3>
 
-                    <div>
-                      <p className="text-2xl  font-semibold text-head">{e.price} ₽</p>
-                      <p className="text-xs text-gray-400 mt-1">
-                        {e.price2} 
-                      </p>
+                        <div className="flex justify-between text-gray-500 text-sm">
+                          <div>
+                            <p className="text-gray font-medium text-xs">
+                              Дата выработки:
+                            </p>
+                            <p className="text-head font-medium text-xs">
+                              {e.productiondate}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="text-gray font-medium text-xs">
+                              Срок годности:
+                            </p>
+                            <p className="text-head font-medium text-xs">
+                              {e.Bestbeforedate}
+                            </p>
+                          </div>
+                        </div>
+
+                    </div>
+                    </Link>
+
+                    {/* counter */}
+                    <div className="flex items-center justify-between mb-2">
+                      <button
+                        onClick={() => handleDecrease(e.id)}
+                        className="   "
+                      >
+                        <img src={minus} alt="minus" />
+                      </button>
+                      <span className="text-lg">{counts[e.id]} кг</span>
+                      <button
+                        onClick={() => handleIncrease(e.id)}
+                        className="  "
+                      >
+                        <img src={pilus} alt="pilus" />
+                      </button>
                     </div>
 
-                    <button className="bg-sariq text-white p-3  rounded">
-                      <img src={shop} alt="Add to Cart" />
-                    </button>
-                  </div>
+                    <div className=" flex justify-between items-center">
 
-                </li>
-              );
-            })}
-          </ul> */}
-
-
-  <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
-            {seafood.map((e) => {
-              return (
-                <li
-                  className="relative bg-white rounded-lg p-4 w-[264px] shadow-lg"
-                  key={e.id}
-                >
-                  <button className="absolute top-3 right-3">
-                    <img src={like} alt="Like" />
-                  </button>
-
-                  <Link to="/" className="block mb-2">
-                    <div className="bg-gray-100 p-2 mb-4">
-                      <img
-                        src={e.img}
-                        alt={e.nameandinfo}
-                        className="w-full rounded-md"
-                      />
-                    </div>
-                  {/* malumot */}
-                  <div className="  ">
-                      <h3 className="text-base text-head font-semibold mb-2">
-                        {e.nameandinfo}
-                      </h3>
-
-                      <div className="flex justify-between text-gray-500 text-sm">
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Дата выработки:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.productiondate}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-gray font-medium text-xs">
-                            Срок годности:
-                          </p>
-                          <p className="text-head font-medium text-xs">
-                            {e.Bestbeforedate}
-                          </p>
-                        </div>
+                      <div>
+                        <p className="text-2xl  font-semibold text-head">{e.price} ₽</p>
+                        <p className="text-xs text-gray-400 mt-1">
+                          {e.price2} 
+                        </p>
                       </div>
 
-                  </div>
-                  </Link>
-
-                  {/* counter */}
-                  <div className="flex items-center justify-between mb-2">
-                    <button
-                      onClick={() => handleDecrease(e.id)}
-                      className="   "
-                    >
-                      <img src={minus} alt="minus" />
-                    </button>
-                    <span className="text-lg">{counts[e.id]} кг</span>
-                    <button
-                      onClick={() => handleIncrease(e.id)}
-                      className="  "
-                    >
-                      <img src={pilus} alt="pilus" />
-                    </button>
-                  </div>
-
-                  <div className=" flex justify-between items-center">
-
-                    <div>
-                      <p className="text-2xl  font-semibold text-head">{e.price} ₽</p>
-                      <p className="text-xs text-gray-400 mt-1">
-                        {e.price2} 
-                      </p>
+                      <button className="bg-sariq text-white p-3  rounded">
+                        <img src={shop} alt="Add to Cart" />
+                      </button>
                     </div>
 
-                    <button className="bg-sariq text-white p-3  rounded">
-                      <img src={shop} alt="Add to Cart" />
-                    </button>
-                  </div>
-
-                </li>
-              );
-            })}
-          </ul>
+                  </li>
+                );
+              })}
+            </ul>
         </div>
       </section>
     </>
