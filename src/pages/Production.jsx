@@ -93,7 +93,7 @@ const Production = () => {
                   {open === 1 &&
                     files.map((file, index) => (
                       <button
-                        className="text-sm font-medium"
+                      className={`text-sm py-2 w-[250px] rounded-lg pl-4 text-start text-head font-medium ${selectedCategory === file ? 'bg-foot' : 'bg-transparent'}`}
                         key={index}
                         onClick={() => setSelectedCategory(file)}
                       >
