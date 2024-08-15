@@ -144,9 +144,9 @@ const Production = () => {
               </span>
             </div>
 
-            <div>
+            <div className="mb-16"> 
               <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
-                {filteredProducts.slice(0, 9).map((e) => {
+                {filteredProducts.slice(0, 6).map((e) => {
                   return (
                     <li
                       className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
