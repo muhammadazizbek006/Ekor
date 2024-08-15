@@ -554,9 +554,25 @@ import fish7 from '../imgs/Production/fish7.png'
 import fish8 from '../imgs/Production/fish8.png'
 import fish9 from '../imgs/Production/fish9.png'
 import fish10 from '../imgs/Production/fish10.jpg'
+// finished products
+import fs1 from '../imgs/finishedproducts/fs1.png'
+import fs2 from '../imgs/finishedproducts/fs2.png'
+import fs3 from '../imgs/finishedproducts/fs3.png'
+import fs4 from '../imgs/finishedproducts/fs4.png'
+import fs5 from '../imgs/finishedproducts/fs5.png'
+import fs6 from '../imgs/finishedproducts/fs6.png'
+import fs7 from '../imgs/finishedproducts/fs7.png'
+import fs8 from '../imgs/finishedproducts/fs8.png'
+import fs9 from '../imgs/finishedproducts/fs9.png'
+import fs10 from '../imgs/finishedproducts/fs10.png'
+import fs11 from '../imgs/finishedproducts/fs11.png'
+import fs12 from '../imgs/finishedproducts/fs12.png'
+import fs13 from '../imgs/finishedproducts/fs13.png'
+
+
 
 export const  seafood = [
-  
+  // ekor procuts fish
   {
     id:1,
     img:fish1,
@@ -854,6 +870,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе горбуши`,
+  cteyk:`Стейк кеты`,
 }, 
 {
   id:24,
@@ -865,6 +883,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе горбуши`,
+  cteyk:`Стейк кеты`,
 }, 
 {
   id:25,
@@ -898,6 +918,8 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+  file:`Филе горбуши`,
+  cteyk:`Стейк кеты`,
 }, 
 {
   id:28,
@@ -1041,8 +1063,155 @@ export const  seafood = [
   productquantity:500,
   price:1130.30,
   price2:`1130.30 ₽ / кг `,
+
 },
 
+
+// ekor products finished
+{
+  id: 41,
+  img:fs1,
+  nameandinfo: "Филе Кеты С/С н/шк в/у(7-10кг) Экор",
+  productiondate: "09.06.2023 г.",
+  Bestbeforedate: "09.03.2024 г.",
+  Wholesale: "(from 500 kg)",
+  productquantity: 500,
+  price: 566.10,
+  price2: "1130.30 ₽ / кг",
+   type: "finishedproducts"
+},
+{
+  id: 42,
+  img:fs2,
+  nameandinfo: "Филе Трески С/С н/шк в/у(5-7кг) Экор",
+  productiondate: "10.06.2023 г.",
+  Bestbeforedate: "10.03.2024 г.",
+  Wholesale: "(from 300 kg)",
+  productquantity: 300,
+  price: 475.00,
+  type: "finishedproducts",
+  price2: "950.00 ₽ / кг"
+},
+{
+  id: 43,
+  img:fs3,
+  nameandinfo: "Филе Лосося С/С н/шк в/у(8-12кг) Экор",
+  productiondate: "11.06.2023 г.",
+  Bestbeforedate: "11.03.2024 г.",
+  Wholesale: "(from 400 kg)",
+  productquantity: 400,
+  price: 620.00,
+  type: "finishedproducts",
+  price2: "1240.00 ₽ / кг"
+},
+{
+  id: 44,
+  img:fs4,
+  nameandinfo: "Филе Скумбрии С/С н/шк в/у(6-8кг) Экор",
+  productiondate: "12.06.2023 г.",
+  Bestbeforedate: "12.03.2024 г.",
+  Wholesale: "(from 350 kg)",
+  productquantity: 350,
+  price: 550.00,
+  type: "finishedproducts",
+  price2: "1100.00 ₽ / кг"
+},
+{
+  id: 45,
+  img:fs5,
+  nameandinfo: "Филе Сайры С/С н/шк в/у(4-6кг) Экор",
+  productiondate: "13.06.2023 г.",
+  Bestbeforedate: "13.03.2024 г.",
+  Wholesale: "(from 250 kg)",
+  productquantity: 250,
+  price: 500.00,
+  type: "finishedproducts",
+  price2: "1000.00 ₽ / кг"
+},
+{
+  id: 46,
+  img:fs6,
+  nameandinfo: "Филе Палтуса С/С н/шк в/у(9-11кг) Экор",
+  productiondate: "14.06.2023 г.",
+  Bestbeforedate: "14.03.2024 г.",
+  Wholesale: "(from 600 kg)",
+  productquantity: 600,
+  price: 700.00,
+  type: "finishedproducts",
+  price2: "1400.00 ₽ / кг"
+},
+{
+  id: 47,
+  img:fs7,
+  nameandinfo: "Филе Камбалы С/С н/шк в/у(7-9кг) Экор",
+  productiondate: "15.06.2023 г.",
+  Bestbeforedate: "15.03.2024 г.",
+  Wholesale: "(from 550 kg)",
+  productquantity: 550,
+  price: 640.00,
+  type: "finishedproducts",
+  price2: "1280.00 ₽ / кг"
+},
+{
+  id: 48,
+  img:fs8,
+  nameandinfo: "Филе Горбуши С/С н/шк в/у(6-8кг) Экор",
+  productiondate: "16.06.2023 г.",
+  Bestbeforedate: "16.03.2024 г.",
+  Wholesale: "(from 450 kg)",
+  productquantity: 450,
+  price: 580.00,
+  type: "finishedproducts",
+  price2: "1160.00 ₽ / кг"
+},
+{
+  id: 49,
+  img:fs9,
+  nameandinfo: "Филе Судака С/С н/шк в/у(5-7кг) Экор",
+  productiondate: "17.06.2023 г.",
+  Bestbeforedate: "17.03.2024 г.",
+  Wholesale: "(from 400 kg)",
+  productquantity: 400,
+  price: 490.00,
+  type: "finishedproducts",
+  price2: "980.00 ₽ / кг"
+},
+{
+  id: 50,
+  img:fs10,
+  nameandinfo: "Филе Окуня С/С н/шк в/у(8-10кг) Экор",
+  productiondate: "18.06.2023 г.",
+  Bestbeforedate: "18.03.2024 г.",
+  Wholesale: "(from 300 kg)",
+  productquantity: 300,
+  price: 560.00,
+  type: "finishedproducts",
+  price2: "1120.00 ₽ / кг"
+},
+{
+  id: 51,
+  img:fs11,
+  nameandinfo: "Филе Минтая С/С н/шк в/у(4-6кг) Экор",
+  productiondate: "19.06.2023 г.",
+  Bestbeforedate: "19.03.2024 г.",
+  Wholesale: "(from 250 kg)",
+  productquantity: 250,
+  price: 510.00,
+  type: "finishedproducts",
+  price2: "1020.00 ₽ / кг"
+},
+{
+  id: 52,
+  img:fs12,
+  nameandinfo: "Филе Сельди С/С н/шк в/у(6-8кг) Экор",
+  productiondate: "20.06.2023 г.",
+  Bestbeforedate: "20.03.2024 г.",
+  Wholesale: "(from 350 kg)",
+  productquantity: 350,
+  price: 530.00,
+  type: "finishedproducts",
+  price2: "1060.00 ₽ / кг"
+}
 
 
 ]

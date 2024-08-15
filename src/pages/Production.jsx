@@ -10,6 +10,7 @@ import pilus from "../imgs/Production/pilus.svg";
 import shop from "../imgs/Production/shop.svg";
 import steyk from "../imgs/acardion/file.svg";
 import likeactive from "../imgs/Production/likeactive.svg";
+import finished from '../imgs/acardion/finished.svg'
 // material tailwind
 import {
   Accordion,
@@ -42,6 +43,7 @@ function Icon({ id, open }) {
 const Production = () => {
   const [open, setOpen] = useState(0);
   const [files, setFiles] = useState([]);
+  const [finishedproducts, setFinishedproducts] = useState([]);
   const [likedProducts, setLikedProducts] = useState({});
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -64,6 +66,7 @@ const Production = () => {
   useEffect(() => {
     const Files = [...new Set(seafood.map((e) => e.file))];
     setFiles(Files);
+    
   }, []);
 
   // Miqdorni oshirish funktsiyasi
@@ -95,6 +98,7 @@ const Production = () => {
         <div className="containerb flex">
           {/* left draw filter */}
           <div className="mr-8">
+            {/* file fish */}
             <div className="mb-12">
               <Accordion
                 className="w-[256px] "
@@ -115,6 +119,43 @@ const Production = () => {
 
                 <AccordionBody className="flex flex-col items-start space-y-5">
                   {open === 1 &&
+                    files.map((file, index) => (
+                      <button
+                        className={`text-sm py-2 w-[250px] rounded-lg pl-4 text-start text-head font-medium ${
+                          selectedCategory === file
+                            ? "bg-foot"
+                            : "bg-transparent"
+                        }`}
+                        key={index}
+                        onClick={() => setSelectedCategory(file)}
+                      >
+                        {file}
+                      </button>
+                    ))}
+                </AccordionBody>
+              </Accordion>
+            </div>
+            {/* file fnished products */}
+            <div className="mb-12">
+              <Accordion
+                className="w-[256px] "
+                open={open === 2}
+                icon={<Icon id={2} open={open} />}
+              >
+                <AccordionHeader
+                  className="flex items-center bg-white rounded-lg p-4 mb-2"
+                  onClick={() => handleOpen(2)}
+                >
+                  <div className="flex items-start">
+                    <img src={finished} alt="finished" className=" mr-2" />
+                    <p className="text-sm font-semibold text-head leading-4">
+                    Готовая продукция <br /> «Экор» 
+                    </p>
+                  </div>
+                </AccordionHeader>
+
+                <AccordionBody className="flex flex-col items-start space-y-5">
+                  {open === 2 &&
                     files.map((file, index) => (
                       <button
                         className={`text-sm py-2 w-[250px] rounded-lg pl-4 text-start text-head font-medium ${
