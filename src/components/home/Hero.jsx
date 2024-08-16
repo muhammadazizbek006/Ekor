@@ -46,7 +46,7 @@ const Hero = () => {
                          
                           <div className='max-w-[288px]'>
                              <p className='text-base font-medium text-white mb-7'>{e.eslatma}</p>
-                             <Link className='px-20 inline-block bg-sariq  py-4 rounded-lg'>Получить прайс</Link>
+                             <Link className='w-72 text-center inline-block bg-sariq  py-4 rounded-lg'>Получить прайс</Link>
                           </div>
                         </div>
                         {/* right */}
