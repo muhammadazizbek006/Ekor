@@ -48,6 +48,9 @@ const Production = () => {
   const [likedProducts, setLikedProducts] = useState({});
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+
+  
+
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
   // raschitat
   const [counts, setCounts] = useState(

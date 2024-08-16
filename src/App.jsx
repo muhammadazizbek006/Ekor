@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Delivery from './pages/Delivery'
 import Payment from './pages/Payment'
 import Production from './pages/Production'
+import Products from './pages/Products'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/Delivery' element={<Delivery/>}/>
         <Route path='/Payment' element={<Payment/>}/>
         <Route path='/Production' element={<Production/>}/>
+        <Route path='/Products' element={<Products/>}/>
       </Route>
     )
   )
