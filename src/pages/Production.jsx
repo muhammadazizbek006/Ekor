@@ -91,6 +91,8 @@ const Production = () => {
     setLikedProducts(updatedLikedProducts);
     dispatch(addProductToLike(product));
   };
+
+  
   return (
     <>
       <Processing />
