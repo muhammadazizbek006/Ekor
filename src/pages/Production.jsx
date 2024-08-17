@@ -384,6 +384,7 @@ const Production = () => {
                       </Link>
 
                       {/* counter */}
+                      
                       <div className="flex items-center justify-between mb-2">
                         <button
                           onClick={() => handleDecrease(e.id)}
