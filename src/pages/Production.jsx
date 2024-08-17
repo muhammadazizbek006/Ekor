@@ -262,7 +262,7 @@ const Production = () => {
                         />
                       </button>
 
-                      <Link to="/" className="block mb-2">
+                      <Link to={`/production/${e.id}`} className="block mb-2">
                         <div className="flex flex-col items-center mb-4 w-[200px] h-[185px]">
                           <img
                             src={e.img}

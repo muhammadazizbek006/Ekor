@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
     
-      <HeroHill/>
+
       <Hero/>
       <ProductsReport/>
       <ProductsOffer/>
