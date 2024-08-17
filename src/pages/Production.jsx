@@ -50,21 +50,8 @@ const Production = () => {
   const [files, setFiles] = useState([]);
 
 
-  
-
-  useEffect(() => {
-    if (open === 1) {
-      // Filter products for rawfish
-      const rawfishProducts = seafood.filter((item) => item.type === "rawfish");
-      setFilteredProducts(rawfishProducts);
-      const uniqueFiles = [...new Set(rawfishProducts.map((item) => item.file))];
-      setFiles(uniqueFiles);
-    }
-  }, [open]);
-
   useEffect(() => {
     if (open === 2) {
-      // Display all file types for finished products
       const finishedProducts = seafood.filter((item) => item.type === "finishedproducts");
       const uniqueFiles = [...new Set(finishedProducts.map((item) => item.file))];
       setFiles(uniqueFiles);
@@ -75,7 +62,19 @@ const Production = () => {
       } else {
         setFilteredProducts(finishedProducts);
       }
-    } else {
+    } else if (open === 3) {
+      // Filter for Dough products
+      const DoughProducts = seafood.filter((item) => item.type === "Dough products");
+      const Dough = [...new Set(DoughProducts.map((item) => item.nameandinfo))];
+      setFiles(Dough);
+
+      if (selectedCategory) {
+        const filteredByDough = DoughProducts.filter((item) => item.nameandinfo === selectedCategory);
+        setFilteredProducts(filteredByDough);
+      } else {
+        setFilteredProducts(DoughProducts);
+      }
+    } else if (open === 1) {
       // Filter products for rawfish
       const rawfishProducts = seafood.filter((item) =>
         item.type === "rawfish" && (selectedCategory ? item.file === selectedCategory : true)
@@ -83,6 +82,9 @@ const Production = () => {
       setFilteredProducts(rawfishProducts);
     }
   }, [open, selectedCategory]);
+
+
+
 
 
   
@@ -213,17 +215,17 @@ const Production = () => {
 
                 <AccordionBody className="flex flex-col items-start space-y-5">
                   {open === 3 &&
-                    files.map((file, index) => (
+                    files.map((nameandinfo, index) => (
                       <button
                         className={`text-sm py-2 w-[250px] rounded-lg pl-4 text-start text-head font-medium ${
-                          selectedCategory === file
+                          selectedCategory === nameandinfo
                             ? "bg-foot"
                             : "bg-transparent"
                         }`}
                         key={index}
-                        onClick={() => setSelectedCategory(file)}
+                        onClick={() => setSelectedCategory(nameandinfo)}
                       >
-                        {file}
+                        {nameandinfo}
                       </button>
                     ))}
                 </AccordionBody>
@@ -348,7 +350,7 @@ const Production = () => {
                         />
                       </button>
 
-                      <Link to="/" className="block mb-2">
+                      <Link to="/" className="block mb-2 ">
                         <div className="flex flex-col items-center mb-2">
                           <img
                             src={e.img}
