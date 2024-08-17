@@ -9,6 +9,7 @@ import Payment from './pages/Payment'
 import Production from './pages/Production'
 import Products from './pages/Products'
 import Sinov from './pages/Sinov'
+import Catalog from './pages/Catalog'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/Production' element={<Production/>}/>
         <Route path='/Products' element={<Products/>}/>
         <Route path='/sinov' element={<Sinov/>}/>
+        <Route path='/Catalog' element={<Catalog/>}/>
       </Route>
     )
   )
