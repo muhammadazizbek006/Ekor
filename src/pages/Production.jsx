@@ -330,15 +330,15 @@ const Production = () => {
               </ul>
               <Subscribetwo />
               <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
-                {filteredProducts.slice(0, 6).map((e) => {
+                {filteredProducts.slice(6, 12).map((e) => {
                   return (
                     <li
-                      className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
+                      className="relative flex flex-col justify-between bg-white rounded-lg p-5 w-[264px] h-[402px] shadow-lg"
                       key={e.id}
                     >
                       <button
                         onClick={() => toggleLike(e)}
-                        className="absolute top-3 right-3"
+                        className="absolute top-2 right-3"
                       >
                         <img
                           src={likedProducts[e.id] ? likeactive : like}
@@ -347,16 +347,16 @@ const Production = () => {
                       </button>
 
                       <Link to="/" className="block mb-2">
-                        <div className="bg-gray-100 p-2 mb-4">
+                        <div className="flex flex-col items-center mb-2">
                           <img
                             src={e.img}
                             alt={e.nameandinfo}
-                            className="w-full rounded-md"
+                            className=" rounded-md object-cover w-[180px]"
                           />
                         </div>
                         {/* malumot */}
                         <div className="  ">
-                          <h3 className="text-base text-head font-semibold mb-2">
+                          <h3 className="text-base text-head font-semibold mb-1">
                             {e.nameandinfo}
                           </h3>
 
