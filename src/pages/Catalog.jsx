@@ -253,12 +253,12 @@ const Catalog = () => {
                 {filteredProducts.slice(0, 6).map((e) => {
                 return (
                     <li
-                    className="relative flex flex-col justify-between bg-white rounded-lg pt-3 pb-1 px-4 w-[264px] h-[404px] shadow-lg"
+                    className="relative flex flex-col justify-between bg-white rounded-lg  pt-2 pb-1 px-4 w-[264px] h-[404px] shadow-lg"
                     key={e.id}
                     >
                     <button
                         onClick={() => toggleLike(e)}
-                        className="absolute top-2 right-3"
+                        className="absolute top-1 right-3"
                     >
                         <img
                         src={likedProducts[e.id] ? likeactive : like}
@@ -300,7 +300,7 @@ const Catalog = () => {
                         </div>
                         </div>
                     </Link>
-
+                    
                     {/* counter */}
                     <div className="flex items-center justify-between mb-2">
                         <button
