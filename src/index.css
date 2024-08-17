@@ -72,3 +72,7 @@ border-color: #20368633;
     grid-row: span 1;
   }
   
+
+  .swiper-wrapper{
+    margin: 0;
+  }
