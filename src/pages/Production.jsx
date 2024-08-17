@@ -84,6 +84,8 @@ const Production = () => {
     }
   }, [open, selectedCategory]);
 
+
+  
   const handleOpen = (id) => {
     setOpen(id);
   };

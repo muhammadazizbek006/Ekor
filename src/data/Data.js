@@ -568,6 +568,15 @@ import fs10 from '../imgs/finishedproducts/fs10.png'
 import fs11 from '../imgs/finishedproducts/fs11.png'
 import fs12 from '../imgs/finishedproducts/fs12.png'
 import fs13 from '../imgs/finishedproducts/fs13.png'
+// xamr
+import ds1 from '../imgs/Production/ds1.png'
+import ds2 from '../imgs/Production/ds2.png'
+import ds3 from '../imgs/Production/ds3.png'
+import ds4 from '../imgs/Production/ds4.png'
+import ds5 from '../imgs/Production/ds5.png'
+import ds6 from '../imgs/Production/ds6.png'
+import ds7 from '../imgs/Production/ds7.png'
+
 
 
 
@@ -1265,7 +1274,92 @@ export const  seafood = [
   price2: "1060.00 ₽ / кг",
   type: "finishedproducts",
   file: "Филе Сельди"
-}
-
+},
+// xamr maxsulotlari
+{
+  id: 53,
+  img: ds1,
+  nameandinfo: "Лапша пшеничная рамен Хаката Тай Шеф 500гр 1/10",
+  productiondate: "13.06.2024 г.",
+  Bestbeforedate: "13.06.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 350,
+  price: 196,
+  price2: "1060.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 54,
+  img: ds2,
+  nameandinfo: "Основы для пиццы",
+  productiondate: "01.07.2024 г.",
+  Bestbeforedate: "01.07.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 200,
+  price: 250,
+  price2: "1200.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 55,
+  img: ds3,
+  nameandinfo: "Тесто слоеное",
+  productiondate: "20.05.2024 г.",
+  Bestbeforedate: "20.05.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 150,
+  price: 180,
+  price2: "950.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 56,
+  img: ds4,
+  nameandinfo: "Фокачча",
+  productiondate: "11.06.2024 г.",
+  Bestbeforedate: "11.06.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 300,
+  price: 220,
+  price2: "1100.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 57,
+  img: ds5,
+  nameandinfo: "Хлеб",
+  productiondate: "05.07.2024 г.",
+  Bestbeforedate: "05.07.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 500,
+  price: 170,
+  price2: "900.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 58,
+  img: ds6,
+  nameandinfo: "Лапша (Яичная)",
+  productiondate: "15.08.2024 г.",
+  Bestbeforedate: "15.08.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 400,
+  price: 210,
+  price2: "1150.00 ₽ / кг",
+  type: "Dough products",
+},
+{
+  id: 59,
+  img: ds7,
+  nameandinfo: "Паста Феттучине",
+  productiondate: "12.09.2024 г.",
+  Bestbeforedate: "12.09.2025 г.",
+  Wholesale: "Цена от 1 упаковки (10 шт)",
+  productquantity: 600,
+  price: 230,
+  price2: "1250.00 ₽ / кг",
+  type: "Dough products",
+},
+// 
 
 ]
