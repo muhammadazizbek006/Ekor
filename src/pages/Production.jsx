@@ -42,60 +42,72 @@ function Icon({ id, open }) {
 }
 
 const Production = () => {
-  const [open, setOpen] = useState(0);
-  const [files, setFiles] = useState([]);
-  const [finishedproducts, setFinishedproducts] = useState([]);
-  const [likedProducts, setLikedProducts] = useState({});
+  const [open, setOpen] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [counts, setCounts] = useState({});
+  const [likedProducts, setLikedProducts] = useState({});
+  const [files, setFiles] = useState([]);
 
 
   
 
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
-  // raschitat
-  const [counts, setCounts] = useState(
-    seafood.reduce((acc, item) => {
-      acc[item.id] = 1; // Har bir mahsulot uchun boshlang'ich miqdor
-      return acc;
-    }, {})
-  );
+  useEffect(() => {
+    if (open === 1) {
+      // Filter products for rawfish
+      const rawfishProducts = seafood.filter((item) => item.type === "rawfish");
+      setFilteredProducts(rawfishProducts);
+      const uniqueFiles = [...new Set(rawfishProducts.map((item) => item.file))];
+      setFiles(uniqueFiles);
+    }
+  }, [open]);
+
+  useEffect(() => {
+    if (open === 2) {
+      // Display all file types for finished products
+      const finishedProducts = seafood.filter((item) => item.type === "finishedproducts");
+      const uniqueFiles = [...new Set(finishedProducts.map((item) => item.file))];
+      setFiles(uniqueFiles);
+
+      if (selectedCategory) {
+        const filteredByFile = finishedProducts.filter((item) => item.file === selectedCategory);
+        setFilteredProducts(filteredByFile);
+      } else {
+        setFilteredProducts(finishedProducts);
+      }
+    } else {
+      // Filter products for rawfish
+      const rawfishProducts = seafood.filter((item) =>
+        item.type === "rawfish" && (selectedCategory ? item.file === selectedCategory : true)
+      );
+      setFilteredProducts(rawfishProducts);
+    }
+  }, [open, selectedCategory]);
+
+  const handleOpen = (id) => {
+    setOpen(id);
+  };
 
   const handleDecrease = (id) => {
     setCounts((prevCounts) => ({
       ...prevCounts,
-      [id]: prevCounts[id] > 0 ? prevCounts[id] - 1 : 0,
+      [id]: (prevCounts[id] || 0) - 1,
     }));
   };
 
-  useEffect(() => {
-    const Files = [...new Set(seafood.map((e) => e.file))];
-    setFiles(Files);
-    
-  }, []);
-
-  // Miqdorni oshirish funktsiyasi
   const handleIncrease = (id) => {
     setCounts((prevCounts) => ({
       ...prevCounts,
-      [id]: prevCounts[id] + 1,
+      [id]: (prevCounts[id] || 0) + 1,
     }));
   };
 
-  // Filter the products based on the selected file type
-  const filteredProducts = selectedCategory
-    ? seafood.filter((item) => item.file === selectedCategory)
-    : seafood;
-  // like
-
   const toggleLike = (product) => {
-    const updatedLikedProducts = {
-      ...likedProducts,
-      [product.id]: !likedProducts[product.id],
-    };
-    setLikedProducts(updatedLikedProducts);
-    dispatch(addProductToLike(product));
+    setLikedProducts((prevLikes) => ({
+      ...prevLikes,
+      [product.id]: !prevLikes[product.id],
+    }));
   };
-
   
   return (
     <>
@@ -233,12 +245,12 @@ const Production = () => {
                 {filteredProducts.slice(0, 6).map((e) => {
                   return (
                     <li
-                      className="relative bg-white rounded-lg p-4 w-[264px] h-[402px] shadow-lg"
+                      className="relative flex flex-col justify-between bg-white rounded-lg p-5 w-[264px] h-[402px] shadow-lg"
                       key={e.id}
                     >
                       <button
                         onClick={() => toggleLike(e)}
-                        className="absolute top-3 right-3"
+                        className="absolute top-2 right-3"
                       >
                         <img
                           src={likedProducts[e.id] ? likeactive : like}
@@ -247,16 +259,16 @@ const Production = () => {
                       </button>
 
                       <Link to="/" className="block mb-2">
-                        <div className="bg-gray-100 p-2 mb-4">
+                        <div className="flex flex-col items-center mb-2">
                           <img
                             src={e.img}
                             alt={e.nameandinfo}
-                            className="w-full rounded-md"
+                            className=" rounded-md object-cover w-[180px]"
                           />
                         </div>
                         {/* malumot */}
                         <div className="  ">
-                          <h3 className="text-base text-head font-semibold mb-2">
+                          <h3 className="text-base text-head font-semibold mb-1">
                             {e.nameandinfo}
                           </h3>
 
