@@ -1360,6 +1360,7 @@ export const  seafood = [
   price2: "1250.00 ₽ / кг",
   type: "Dough products",
 },
-// 
+// katalog uchun
+
 
 ]

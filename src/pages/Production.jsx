@@ -249,7 +249,7 @@ const Production = () => {
                 {filteredProducts.slice(0, 6).map((e) => {
                   return (
                     <li
-                      className="relative flex flex-col justify-between bg-white rounded-lg p-5 w-[264px] h-[402px] shadow-lg"
+                      className="relative flex flex-col justify-between bg-white rounded-lg pt-3 pb-1 px-4 w-[264px] h-[404px] shadow-lg"
                       key={e.id}
                     >
                       <button
@@ -263,11 +263,11 @@ const Production = () => {
                       </button>
 
                       <Link to="/" className="block mb-2">
-                        <div className="flex flex-col items-center mb-2">
+                        <div className="flex flex-col items-center mb-4 w-[200px] h-[185px]">
                           <img
                             src={e.img}
                             alt={e.nameandinfo}
-                            className=" rounded-md object-cover w-[180px]"
+                            className=" rounded-md object-cover "
                           />
                         </div>
                         {/* malumot */}
