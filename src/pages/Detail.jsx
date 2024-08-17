@@ -38,7 +38,7 @@ const Detail = () => {
               seafood.map((e)=>{
                 return(
               <SwiperSlide>
-                <img src={e.img} />
+                <img className='w-[553px] h-[553px]' src={e.img} />
               </SwiperSlide>
 
                 )

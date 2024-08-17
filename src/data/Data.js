@@ -544,8 +544,8 @@ export const process = [
 
 
 // maxsulotlarni datasi
-import fish1 from '../imgs/Production/fish1.jpg'
-import fish2 from '../imgs/Production/fish2.jpg'
+import fish1 from '../imgs/Production/fish1.png'
+import fish2 from '../imgs/Production/fish2.png'
 import fish3 from '../imgs/Production/fish3.png'
 import fish4 from '../imgs/Production/fish4.png'
 import fish5 from '../imgs/Production/fish5.png'
@@ -553,7 +553,7 @@ import fish6 from '../imgs/Production/fish6.png'
 import fish7 from '../imgs/Production/fish7.png'
 import fish8 from '../imgs/Production/fish8.png'
 import fish9 from '../imgs/Production/fish9.png'
-import fish10 from '../imgs/Production/fish10.jpg'
+import fish10 from '../imgs/Production/fish10.png'
 // finished products
 import fs1 from '../imgs/finishedproducts/fs1.png'
 import fs2 from '../imgs/finishedproducts/fs2.png'
