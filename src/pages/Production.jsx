@@ -19,6 +19,9 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Subscribetwo from "../components/Production/Subscribetwo";
+import { useDispatch } from "react-redux";
+import { addProductToWishlist } from "../store/slice/productsWishlistDataSlice";
+import { addProductToLike } from "../store/slice/laykSlice";
 
 function Icon({ id, open }) {
   return (
@@ -46,7 +49,7 @@ const Production = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [counts, setCounts] = useState({});
-  const [likedProducts, setLikedProducts] = useState({});
+
   const [files, setFiles] = useState([]);
 
 
@@ -106,11 +109,23 @@ const Production = () => {
     }));
   };
 
+  const [likedProducts, setLikedProducts] = useState({});
+
   const toggleLike = (product) => {
-    setLikedProducts((prevLikes) => ({
-      ...prevLikes,
-      [product.id]: !prevLikes[product.id],
-    }));
+    const updatedLikedProducts = {
+      ...likedProducts,
+      [product.id]: !likedProducts[product.id],
+    };
+    setLikedProducts(updatedLikedProducts);
+    dispatch(addProductToLike(product));
+  };
+
+
+
+
+  const dispatch = useDispatch()
+  const mahsulotniWishlistgaQoshish = (product) => {
+    dispatch(addProductToWishlist(product));
   };
   
   return (
@@ -324,7 +339,7 @@ const Production = () => {
                           </p>
                         </div>
 
-                        <button className="bg-sariq text-white p-3 rounded">
+                        <button className="bg-sariq text-white p-3 rounded" onClick={() => mahsulotniWishlistgaQoshish(e)}>
                           <img src={shop} alt="Add to Cart" />
                         </button>
                       </div>
@@ -413,7 +428,7 @@ const Production = () => {
                           </p>
                         </div>
 
-                        <button className="bg-sariq text-white p-3 rounded">
+                        <button className="bg-sariq text-white p-3 rounded" onClick={() => mahsulotniWishlistgaQoshish(e)}>
                           <img src={shop} alt="Add to Cart" />
                         </button>
                       </div>

@@ -10,10 +10,17 @@ import kirish from '../../imgs/herohill/kirish.svg'
 
 import { addProductToWishlist } from '../../store/slice/productsWishlistDataSlice'
 import { useSelector } from "react-redux";
+
 const HeroHill = () => {
+// tanlangan maxsulotlarni qo'shish
   const tanlanganMahsulotlar = useSelector(
     (store) => store.tanlanganMahsulotlar.data
   );
+  // like boilganlarni qo'shish
+  const productliked = useSelector(
+    (store) => store.likemaxsulotlar.data
+  );
+
   return (
     <section className='bg-head py-3 hidden md:block mb-5'>
       <ul className='containerb flex justify-between items-center'>
@@ -38,22 +45,22 @@ const HeroHill = () => {
         {/* like shop va kirish */}
         <li className='flex items-center'>
           {/* like */}
-          <div className='flex items-center lg:mr-10'>
-            <Link className='relative mr-4'>
+          <Link  className='flex items-center lg:mr-10'>
+            <div className='relative mr-4'>
               <img src={like} alt="" />
-              <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>1</span>
-            </Link>
+              <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>{productliked.length}</span>
+            </div>
             <p className='text-base font-semibold text-white hidden lg:block'>Избранное</p>
-          </div>
+          </Link>
     
          {/* shop */}
-          <div className='flex items-center mr-3 lg:mr-10'>
-            <Link className='relative mr-4'>
+          <Link to='/shop' className='flex items-center mr-3 lg:mr-10'>
+            <div  className='relative mr-4'>
               <img src={shop} alt="" />
               <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>{tanlanganMahsulotlar.length}</span>
-            </Link>
+            </div>
             <p className='text-base font-semibold text-white hidden lg:block'>10 000,00 ₽</p>
-          </div>
+          </Link>
 
           <div >
             <Link className='flex items-center'>

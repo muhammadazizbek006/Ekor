@@ -11,6 +11,7 @@ import Products from './pages/Products'
 import Sinov from './pages/Sinov'
 import Catalog from './pages/Catalog'
 import Detail from './pages/Detail'
+import Shop from './pages/Shop'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/sinov' element={<Sinov/>}/>
         <Route path='/Catalog' element={<Catalog/>}/>
         <Route path='/production/:id' element={<Detail/>}/>
+        <Route path='/shop' element={<Shop/>}/>
       </Route>
     )
   )
