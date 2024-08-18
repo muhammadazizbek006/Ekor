@@ -127,6 +127,10 @@ const Production = () => {
   const mahsulotniWishlistgaQoshish = (product) => {
     dispatch(addProductToWishlist(product));
   };
+
+  // narx
+
+  
   
   return (
     <>

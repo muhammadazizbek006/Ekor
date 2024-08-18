@@ -10,6 +10,7 @@ import kirish from '../../imgs/herohill/kirish.svg'
 
 import { addProductToWishlist } from '../../store/slice/productsWishlistDataSlice'
 import { useSelector } from "react-redux";
+import { seafood } from '../../data/Data'
 
 const HeroHill = () => {
 // tanlangan maxsulotlarni qo'shish
@@ -20,6 +21,9 @@ const HeroHill = () => {
   const productliked = useSelector(
     (store) => store.likemaxsulotlar.data
   );
+  // narx
+
+  const totalPrice = tanlanganMahsulotlar.reduce((total, product) => total + product.price, 0);
 
   return (
     <section className='bg-head py-3 hidden md:block mb-5'>
@@ -59,7 +63,7 @@ const HeroHill = () => {
               <img src={shop} alt="" />
               <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>{tanlanganMahsulotlar.length}</span>
             </div>
-            <p className='text-base font-semibold text-white hidden lg:block'>10 000,00 ₽</p>
+            <p className='text-base font-semibold text-white hidden lg:block'>{totalPrice.toFixed(2)}</p>
           </Link>
 
           <div >
