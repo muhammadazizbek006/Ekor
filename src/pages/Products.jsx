@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// data
+// data and redux
 import { seafood } from "../data/Data";
+import { useDispatch, useSelector } from "react-redux";
+import { addProductToWishlist } from "../store/slice/productsWishlistDataSlice";
 // img
 import like from "../imgs/Production/heart.svg";
 import minus from "../imgs/Production/minus.svg";
@@ -115,6 +117,10 @@ const Products = () => {
       ...prevLikes,
       [product.id]: !prevLikes[product.id],
     }));
+  };
+  const dispatch = useDispatch()
+  const mahsulotniWishlistgaQoshish = (product) => {
+    dispatch(addProductToWishlist(product));
   };
 
   return (
@@ -299,7 +305,7 @@ const Products = () => {
                         </button>
                       </div>
 
-                      <button>
+                      <button onClick={() => mahsulotniWishlistgaQoshish(e)}>
                         <img src={shop} alt="shop" />
                       </button>
                     </div>

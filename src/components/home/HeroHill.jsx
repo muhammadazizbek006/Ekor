@@ -6,7 +6,14 @@ import shop from '../../imgs/herohill/shop.svg'
 import like from '../../imgs/herohill/like.svg'
 import search from '../../imgs/herohill/search.svg'
 import kirish from '../../imgs/herohill/kirish.svg'
+// redux
+
+import { addProductToWishlist } from '../../store/slice/productsWishlistDataSlice'
+import { useSelector } from "react-redux";
 const HeroHill = () => {
+  const tanlanganMahsulotlar = useSelector(
+    (store) => store.tanlanganMahsulotlar.data
+  );
   return (
     <section className='bg-head py-3 hidden md:block mb-5'>
       <ul className='containerb flex justify-between items-center'>
@@ -43,7 +50,7 @@ const HeroHill = () => {
           <div className='flex items-center mr-3 lg:mr-10'>
             <Link className='relative mr-4'>
               <img src={shop} alt="" />
-              <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>1</span>
+              <span className='bg-sariq px-1.5 absolute rounded-full top-0 left-4  text-[10px] font-semibold text-head'>{tanlanganMahsulotlar.length}</span>
             </Link>
             <p className='text-base font-semibold text-white hidden lg:block'>10 000,00 ₽</p>
           </div>
