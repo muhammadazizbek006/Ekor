@@ -599,7 +599,7 @@ export const  seafood = [
 }, 
 {
   id:2,
-  img:fish1,
+  img:fish2,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -613,7 +613,7 @@ export const  seafood = [
 }, 
 {
   id:3,
-  img:fish1,
+  img:fish3,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -627,7 +627,7 @@ export const  seafood = [
 }, 
 {
   id:4,
-  img:fish1,
+  img:fish4,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -655,7 +655,7 @@ export const  seafood = [
 }, 
 {
   id:6,
-  img:fish1,
+  img:fish5,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -669,7 +669,7 @@ export const  seafood = [
 }, 
 {
   id:7,
-  img:fish1,
+  img:fish6,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -683,7 +683,7 @@ export const  seafood = [
 }, 
 {
   id:8,
-  img:fish1,
+  img:fish7,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -697,7 +697,7 @@ export const  seafood = [
 }, 
 {
   id:9,
-  img:fish1,
+  img:fish8,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -739,7 +739,7 @@ export const  seafood = [
 }, 
 {
   id:12,
-  img:fish1,
+  img:fish9,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -753,7 +753,7 @@ export const  seafood = [
 }, 
 {
   id:13,
-  img:fish1,
+  img:fish2,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
@@ -767,7 +767,7 @@ export const  seafood = [
 }, 
 {
   id:14,
-  img:fish1,
+  img:fish10,
   nameandinfo:`Барабулька н/р 12шт х 0,6кг 1/12 Араката`,
   productiondate:'15.11.2023 г.',
   Bestbeforedate:`02.03.2024 г.`,
