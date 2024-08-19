@@ -58,27 +58,27 @@ const Korzinka = () => {
       setStep(3);
     }
   };
-
+  const steps = ["Корзина", "Адрес и время доставки", "Оплата", "Спасибо"];
   return (
     <section className="py-10 ">
       {tanlanganMahsulotlar.length > 0 ? (
         <div className="containerb ">
           {/* Step Navigation */}
           <div className="flex justify-between mb-8 gap-4">
-            {[1, 2, 3, 4].map((s) => (
+            {steps.map((s) => (
               <button
                 key={s}
                 className={`flex flex-col items-center py-2 px-4 rounded-md ${
-                  step === s ? "bg-white text-black" : "bg-gray-300 text-black"
+                  step === s ? "bg-white text-head " : "bg-gray-300 text-head"
                 } ${
-                  s > step ? "cursor-not-allowed" : "border border-gray-400"
+                  s > step ? "cursor-not-allowed" : ""
                 }`}
                 onClick={() => s <= step && setStep(s)}
                 disabled={s > step}
                 style={{ flex: 1 }}
               >
-                <div className="text-lg font-bold">{s}</div>
-                <div className="text-sm">Корзина {s}</div>
+                <div className="text-sm  font-medium text-head">{s}</div>
+
               </button>
             ))}
           </div>
