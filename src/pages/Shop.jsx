@@ -1,40 +1,248 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import maxsulotyoq from "../imgs/shop/maxsulotyoq.png";
+import { deleteUserOfferLinkData } from "../store/slice/productsWishlistDataSlice";
+import minus from '../imgs/Production/minus.svg'
+import pilus from '../imgs/Production/pilus.svg'
+import yuk from '../imgs/shop/yuk.svg'
+// Sample data for demonstration
 
-const TabContent = ({ content }) => (
-  <div className="p-4 bg-gray-100 rounded-md shadow-md">
-    {content}
-  </div>
-);
 
-const Shop = () => {
-  const [activeTab, setActiveTab] = useState(0);
+const Korzinka = () => {
+  const dispatch = useDispatch();
+  const tanlanganMahsulotlar = useSelector(
+    (store) => store.tanlanganMahsulotlar.data
+  );
 
-  const tabs = [
-    { label: 'Tab 1', content: 'Content for Tab 1' },
-    { label: 'Tab 2', content: 'Content for Tab 2' },
-    { label: 'Tab 3', content: 'Content for Tab 3' }
-  ];
+  const [counts, setCounts] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    const initialCounts = tanlanganMahsulotlar.reduce((acc, product) => {
+      acc[product.id] = 1;
+      return acc;
+    }, {});
+    setCounts(initialCounts);
+  }, [tanlanganMahsulotlar]);
+
+  useEffect(() => {
+    const newTotalPrice = tanlanganMahsulotlar.reduce((acc, product) => {
+      return acc + (counts[product.id] ? product.narxi * counts[product.id] : 0);
+    }, 0);
+    setTotalPrice(newTotalPrice);
+  }, [counts, tanlanganMahsulotlar]);
+
+  const increment = (id) => {
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: (prevCounts[id] || 0) + 1,
+    }));
+  };
+
+  const decrement = (id) => {
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: (prevCounts[id] > 1 ? prevCounts[id] - 1 : 1) || undefined,
+    }));
+  };
+
+  const handleNextStep = () => {
+    if (step === 1 && Object.keys(counts).length > 0) {
+      setStep(2);
+    } else if (step === 2) {
+      setStep(3);
+    } else if (step === 3) {
+      setStep(4);
+    }
+  };
+
+  const handlePrevStep = () => {
+    if (step === 2) {
+      setStep(1);
+    } else if (step === 3) {
+      setStep(2);
+    } else if (step === 4) {
+      setStep(3);
+    }
+  };
 
   return (
-    <div className="p-6">
-      <div className="flex space-x-4 mb-4 border-b border-gray-300">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`py-2 px-4 text-sm font-medium ${
-              activeTab === index
-                ? 'border-b-2 border-blue-500 text-blue-600'
-                : 'text-gray-500 hover:text-gray-700'
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+    <section className="py-10 ">
+      <div className="containerb ">
+        {/* Step Navigation */}
+        <div className=" flex justify-between mb-8 gap-4">
+          {[1, 2, 3, 4].map((s) => (
+            <button
+              key={s}
+              className={` flex flex-col items-center py-2 px-4 rounded-md ${step === s ? 'bg-black text-white' : 'bg-white text-black'} ${s < step ? 'bg-gray-300' : 'border border-gray-400'}`}
+              onClick={() => setStep(s)}
+              style={{ flex: 1 }}
+            >
+              <div className=" text-lg font-bold">{s}</div>
+              <div className=" text-sm">Step {s}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Step Content */}
+        {step === 1 && (
+          <div className="flex justify-between">
+            <ul className="bg-white shadow-md rounded-lg py-3 px-2 flex flex-col space-y-3 w-[736px]">
+              {tanlanganMahsulotlar.map((e) => (
+                <li
+                  key={e.id}
+                  className="flex justify-between items-center border-b-2 border-input relative pb-4"
+                >
+                  <div className="flex flex-col lg:flex-row items-center">
+                    <div className="mr-4 p-3 rounded-xl">
+                      <img className="w-[120px] h-[120px]" src={e.img} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-head mb-2 max-w-64">
+                        {e.nameandinfo}
+                      </h3>
+                      <div className="flex flex-col space-y-1">
+                        <span className="text-sm font-medium text-gray">{e.productiondate}</span>
+                        <span className="text-sm font-medium text-gray">
+                          {e.price2}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex flex-col mb-2.5">
+                      <span className="text-base font-semibold mb-0.5 text-head">{e.price2}</span>
+                      <span className="text-gray text-xs line-through">{e.price} ₽</span>
+                    </div>
+                    <div className="flex items-center space-x-5 border-2 border-input p-3 rounded-xl">
+                      <button onClick={() => decrement(e.id)} className="">
+                        <img src={minus} alt="" />
+                      </button>
+                      <span className="mx-2 text-sm font-medium text-head">{counts[e.id]} шт</span>
+                      <button onClick={() => increment(e.id)} className="">
+                        <img src={pilus} alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div>
+
+              <div className="bg-white max-w-[358px] py-3 pl-4 flex border-s-4 rounded-lg  border-head mb-5 ">
+                <img className="mr-3" src={yuk} alt="" />
+                <p>Минимальная сумма заказа с доставкой на дом — 3 000 ₽. 
+                В продуктомат — 1 000 ₽.</p>
+              </div>
+
+                <div className="bg-white p-5 rounded-lg">
+                  <h3 className="text-2xl font-semibold text-head mb-5">Ваш заказ</h3>
+                  
+                  <div>
+                    <span className="text-base text-head font-semibold mb-3">Промокод</span>
+                    <div className="mb-5">
+                      <input className="w-48 py-4 pl-4 bg-foot rounded-lg border border-input mr-4" type="text" placeholder="Введите код"/>
+                      <button className="text-sm font-semibold text-head bg-sariq p-4 rounded-lg">Применить</button>
+                    </div>
+                  </div>
+                  <div>
+
+                    <div className="flex justify-between border-y-2 border-foot py-5 mb-5 ">
+                      <p className="text-sm font-medium text-head">Товары (2) – 0,35 кг</p>
+                      <span className="text-head text-base font-semibold"> 169,00 ₽ </span>
+
+                    </div>
+
+                      <div className="flex justify-between mb-5">
+                        <div>
+                          <p className="text-sm font-medium text-head">Итого</p>
+                          <p className="text-xs font-medium text-gray">Общая стоимость без учёта доставки</p>
+
+                        </div>
+                        <p className="text-head text-base font-semibold">169,00 ₽ </p>
+                      </div>
+                  </div>
+                    <button
+                      onClick={handleNextStep}
+                      className="text-head  text-sm font-semibold flex flex-col items-center bg-sariq py-4 w-full rounded-lg"
+                      disabled={Object.keys(counts).length === 0}
+                    >
+                      Оформить заказ
+                    </button>
+                </div>
+            </div>
+          </div>
+        )}
+
+        {step === 2 && (
+          <div>
+            <h2 className="text-3xl font-black mb-4">Step 2: Enter Details</h2>
+            <p>Form for entering details goes here.</p>
+            {/* Example input fields */}
+            <form className="space-y-4">
+              <input type="text" placeholder="Name" className="w-full p-2 border border-gray-300 rounded-md" />
+              <input type="email" placeholder="Email" className="w-full p-2 border border-gray-300 rounded-md" />
+              <input type="text" placeholder="Address" className="w-full p-2 border border-gray-300 rounded-md" />
+              {/* Add other input fields as needed */}
+            </form>
+            <button
+              onClick={handlePrevStep}
+              className="px-8 py-3 bg-gray-600 rounded-md text-white mt-4 mr-2"
+            >
+              Back
+            </button>
+            <button
+              onClick={handleNextStep}
+              className="px-8 py-3 bg-black rounded-md text-white mt-4"
+            >
+              Next
+            </button>
+          </div>
+        )}
+
+        {step === 3 && (
+          <div>
+            <h2 className="text-3xl font-black mb-4">Step 3: Payment</h2>
+            <p>Payment form goes here.</p>
+            {/* Example payment fields */}
+            <form className="space-y-4">
+              <input type="text" placeholder="Card Number" className="w-full p-2 border border-gray-300 rounded-md" />
+              <input type="text" placeholder="Expiry Date" className="w-full p-2 border border-gray-300 rounded-md" />
+              <input type="text" placeholder="CVV" className="w-full p-2 border border-gray-300 rounded-md" />
+              {/* Add other payment fields as needed */}
+            </form>
+            <button
+              onClick={handlePrevStep}
+              className="px-8 py-3 bg-gray-600 rounded-md text-white mt-4 mr-2"
+            >
+              Back
+            </button>
+            <button
+              onClick={() => setStep(4)}
+              className="px-8 py-3 bg-black rounded-md text-white mt-4"
+            >
+              Complete
+            </button>
+          </div>
+        )}
+
+        {step === 4 && (
+          <div>
+            <h2 className="text-3xl font-black mb-4">Thank You!</h2>
+            <p>Your order has been placed successfully.</p>
+            <Link
+              to="/"
+              className="px-8 py-3 bg-black rounded-md text-white mt-4"
+            >
+              Go to Homepage
+            </Link>
+          </div>
+        )}
       </div>
-      <TabContent content={tabs[activeTab].content} />
-    </div>
+    </section>
   );
 };
 
-export default Shop;
+export default Korzinka;
