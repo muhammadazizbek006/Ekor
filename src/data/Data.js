@@ -45,7 +45,7 @@ export const Carusel = [
     id: 1,
     bg: bg1,
     class: "max-w-[600px]",
-    top: "top-3",
+    top: "top-0",
     rounded: "rounded-[33px]",
     title: "> 1000 наименований продуктов питания оптом",
     eslatma: "для HoReCa, общепита, производителей",

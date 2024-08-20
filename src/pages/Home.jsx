@@ -17,17 +17,17 @@ const Home = () => {
     <>
     
 
-      <Hero/>
-      {/* <ProductsReport/>
-      <ProductsOffer/>
-      <MeatAndFruit/>
-      <HouseholdProducts/>
-      <BusinessOffer/>
-      <BusinessMaterials/>
-      <SpecialOffers/>
-      <OurAttentionMatters/>
-      <Subscribe/>
-      <ReviewsFromOurCustomers/> */}
+      {/* <Hero/> */}
+      <ProductsReport/>
+      {/* <ProductsOffer/> */}
+      {/* <MeatAndFruit/> */}
+      {/* <HouseholdProducts/> */}
+      {/* <BusinessOffer/> */}
+      {/* <BusinessMaterials/> */}
+      {/* <SpecialOffers/> */}
+      {/* <OurAttentionMatters/> */}
+      {/* <Subscribe/> */}
+      {/* <ReviewsFromOurCustomers/> */}
 
     </>
   )
