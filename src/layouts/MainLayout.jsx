@@ -13,8 +13,8 @@ const MainLayout = () => {
         <main className='grow'>
             <Outlet/>
         </main>
-        <RequestForCooperation/>
-        <Footer/>
+        {/* <RequestForCooperation/>
+        <Footer/> */}
     </div>
   )
 }
