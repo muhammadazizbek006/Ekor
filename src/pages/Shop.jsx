@@ -48,15 +48,15 @@ const totalPrice = tanlanganMahsulotlar.reduce((total, product) => {
         <div className="containerb ">
           {/* 1 */}
           <div className="flex justify-between mb-6">
-            <ul className="bg-white shadow-md rounded-lg py-3 px-2 flex flex-col space-y-3 w-[736px]">
+            <ul className="bg-white shadow-md rounded-lg p-5 flex flex-col space-y-3 w-[736px]">
               {tanlanganMahsulotlar.map((e) => (
                 <li
                   key={e.id}
                   className="flex justify-between items-center border-b-2 border-input relative pb-4"
                 >
                   <div className="flex flex-col lg:flex-row items-center">
-                    <div className="flex  items-start">
-                      <input type="checkbox" name="" id="" />
+                    <div className="flex  items-center">
+                      <input className="w-5 h-5" type="checkbox" name="" id="" />
                       <div className="mr-4 p-3 rounded-xl">
                         <img className="w-[120px] h-[120px]" src={e.img} alt="" />
                       </div>
