@@ -93,35 +93,16 @@ const BusinessOffer = () => {
                 <label className="mb-1 text-sm font-medium text-head">
                   Ваша ниша
                 </label>
+                <div className="relative w-[446px]">
+  <select className="w-full border-input border py-3   px-4 rounded-lg " id="customSelect">
+    <option value="">wefewf</option>
+    <option value="">wefewf</option>
+    <option value="">wefewf</option>
+    <option value="">wefewf</option>
+  </select>
+</div>
 
-                <Select
-                  className=" w-[444px] rounded-lg "
-                  
-                  placeholder="Оптовик"
-                  onChange={onChange}
-                  options={[
-                    {
-                      value: "Оптовик",
-                      label: "Оптовик",
-                    },
-                    {
-                      value: "Розничная торговля",
-                      label: "Розничная торговля",
-                    },
-                    {
-                      value: "Дистрибьютор",
-                      label: "Дистрибьютор",
-                    },
-                    {
-                      value: "Поставщик",
-                      label: "Поставщик",
-                    },
-                    {
-                      value: "Производитель",
-                      label: "Производитель",
-                    },
-                  ]}
-                />
+
               </div>
             </div>
 

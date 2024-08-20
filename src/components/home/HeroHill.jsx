@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 // img
-import katalog from '../../imgs/herohill/katalog.svg'
+import katalogs from '../../imgs/herohill/katalog.svg'
 import shop from '../../imgs/herohill/shop.svg'
 import like from '../../imgs/herohill/like.svg'
 import search from '../../imgs/herohill/search.svg'
@@ -24,17 +24,21 @@ const HeroHill = () => {
   // narx
 
   const totalPrice = tanlanganMahsulotlar.reduce((total, product) => total + product.price, 0);
+  const [katalog, setKatalog] = useState(false)
 
+  const showkatalog = ()=>{
+    setKatalog(!katalog)
+  }
   return (
-    <section className='bg-head py-3 hidden md:block mb-5'>
+    <section className='bg-head py-3 hidden md:block mb-5 relative'>
       <ul className='containerb flex justify-between items-center'>
         {/* katalog va input */}
         
         <li>
           {/* left katalog */}
           <div className='flex items-center '>
-            <button className='flex items-center mr-7'>
-              <img className='mr-3' src={katalog} alt="katalog" />
+            <button onClick={showkatalog} className='flex items-center mr-7'>
+              <img className='mr-3' src={katalogs} alt="katalog" />
               <p className='text-base font-semibold text-white'>Каталог товаров</p>
             </button>
             {/* input */}
@@ -75,6 +79,16 @@ const HeroHill = () => {
         </li>
         
       </ul>
+      {/* katalog */}
+
+
+      {
+        katalog && 
+
+          <div className='absolute bg-white  top-20 z-50 '>
+              aa
+          </div>
+      }
     </section>
   )
 }
