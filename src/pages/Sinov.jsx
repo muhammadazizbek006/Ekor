@@ -79,12 +79,6 @@ const Sinov = () => {
             } else {
                 setFilteredProducts(doughProducts);
             }
-        } else {
-            // Filter products for rawfish
-            const rawfishProducts = seafood.filter((item) =>
-                item.type === "rawfish" && (selectedCategory ? item.nameandinfo === selectedCategory : true)
-            );
-            setFilteredProducts(rawfishProducts);
         }
     }, [open, selectedCategory]);
 
@@ -113,12 +107,15 @@ const Sinov = () => {
         }));
     };
 
+    // Calculate total weight and price
     const totalWeight = filteredProducts.reduce((total, product) => {
-        return total + ((counts[product.id] || 0) * product.weight);
+        const productWeight = counts[product.id] || 1; // Use count to determine weight
+        return total + (productWeight * (product.weight || 0)); // Calculate total weight
     }, 0);
 
     const totalPrice = filteredProducts.reduce((total, product) => {
-        return total + ((counts[product.id] || 0) * product.price);
+        const productCount = counts[product.id] || 1; // Default to 1 if count is not set
+        return total + (productCount * product.price); // Calculate total price
     }, 0);
 
     return (
@@ -238,63 +235,69 @@ const Sinov = () => {
                         </Accordion>
                     </div>
                 </div>
-
-                {/* right card product */}
-                <div className="flex flex-col items-start space-y-4">
-                    {filteredProducts.map((item) => (
-                        <div
-                            key={item.id}
-                            className="flex flex-row bg-white p-4 rounded-lg w-full mb-4"
-                        >
-                            <div className="w-[100px] h-[100px] mr-4 bg-gray-200 rounded-lg">
+                {/* right show products */}
+                <div className="overflow-y-auto w-full">
+                    {filteredProducts.map((product) => (
+                        <div key={product.id} className="flex items-center mb-4">
+                            <div className="w-32 h-32 bg-gray-200 flex items-center justify-center">
                                 <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="w-full h-full object-cover rounded-lg"
+                                    src={product.img}
+                                    alt={product.name}
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
-                            <div className="flex flex-col justify-between w-full">
-                                <div className="flex justify-between items-center mb-2">
-                                    <h3 className="text-lg font-semibold">{item.name}</h3>
-                                    <button onClick={() => toggleLike(item)}>
+                            <div className="ml-4 flex-1">
+                                <h2 className="text-lg font-bold">{product.name}</h2>
+                                <p className="text-sm text-gray-600">
+                                    {product.description}
+                                </p>
+                                <p className="text-md font-semibold">
+                                    {product.price} $ /kg
+                                </p>
+                                <div className="flex items-center mt-2">
+                                    <button
+                                        onClick={() => handleDecrease(product.id)}
+                                        className="bg-red-500 text-white p-2 rounded"
+                                    >
+                                        <img src={minus} alt="minus" className="w-4 h-4" />
+                                    </button>
+                                    <span className="mx-4 text-lg font-semibold">
+                                        {counts[product.id] || 1} kg
+                                    </span>
+                                    <button
+                                        onClick={() => handleIncrease(product.id)}
+                                        className="bg-blue-500 text-white p-2 rounded"
+                                    >
+                                        <img src={pilus} alt="plus" className="w-4 h-4" />
+                                    </button>
+                                    <button
+                                        onClick={() => toggleLike(product)}
+                                        className="ml-4"
+                                    >
                                         <img
-                                            src={likedProducts[item.id] ? likeactive : like}
+                                            src={likedProducts[product.id] ? likeactive : like}
                                             alt="like"
+                                            className="w-6 h-6"
                                         />
                                     </button>
                                 </div>
-                                <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-                                <div className="flex items-center mb-2">
-                                    <button onClick={() => handleDecrease(item.id)}>
-                                        <img src={minus} alt="minus" />
-                                    </button>
-                                    <span className="mx-2 text-lg">{counts[item.id] || 1}</span>
-                                    <button onClick={() => handleIncrease(item.id)}>
-                                        <img src={pilus} alt="plus" />
-                                    </button>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    <p className="text-lg font-semibold">
-                                        {item.price * (counts[item.id] || 1)} сом
-                                    </p>
-                                    <button className="flex items-center bg-green-500 text-white p-2 rounded-lg">
-                                        <img src={shop} alt="shop" className="mr-2" />
-                                        В корзину
-                                    </button>
-                                </div>
+                                <p className="text-md font-semibold mt-2">
+                                    Total: {(counts[product.id] || 1) * product.price} $
+                                </p>
                             </div>
                         </div>
                     ))}
+                    <div className="mt-6">
+                        <h2 className="text-lg font-bold">Overall Total</h2>
+                        <p className="text-md font-semibold">
+                            Total Weight: {totalWeight} kg
+                        </p>
+                        <p className="text-md font-semibold">
+                            Total Price: {totalPrice} $
+                        </p>
+                    </div>
                 </div>
             </div>
-
-            {/* Total */}
-            <div className="flex justify-between mt-4 p-4 bg-gray-100 rounded-lg">
-                <p className="text-lg font-semibold">Общий вес: {totalWeight} кг</p>
-                <p className="text-lg font-semibold">Общая сумма: {totalPrice} сом</p>
-            </div>
-
-            <Subscribetwo />
         </section>
     );
 };

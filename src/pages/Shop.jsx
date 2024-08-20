@@ -15,31 +15,33 @@ const Korzinka = () => {
     (store) => store.tanlanganMahsulotlar.data
   );
 
-  const [step, setStep] = useState(1);
 
-  const initialCounts = tanlanganMahsulotlar.reduce((acc, product) => {
-    acc[product.id] = 1; // Har bir mahsulot uchun boshlang'ich sanash qiymati
-    return acc;
-  }, {});
+  const [counts, setCounts] = useState({});
 
-  const [counts, setCounts] = useState(initialCounts);
-  const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
-    const newTotalPrice = tanlanganMahsulotlar.reduce((acc, product) => {
-      return acc + product.narxi * counts[product.id];
-    }, 0);
-    setTotalPrice(newTotalPrice);
-  }, [counts, tanlanganMahsulotlar]);
-
-  const increment = (id) => {
-    setCounts((prevCounts) => ({
+const handleDecrease = (id) => {
+  setCounts((prevCounts) => ({
       ...prevCounts,
-      [id]: prevCounts[id] + 1,
-    }));
-  };
+      [id]: Math.max((prevCounts[id] || 1) - 1, 1), // Ensure count is at least 1
+  }));
+};
 
-  const steps = ["Корзина", "Адрес и время доставки", "Оплата", "Спасибо"];
+const handleIncrease = (id) => {
+  setCounts((prevCounts) => ({
+      ...prevCounts,
+      [id]: (prevCounts[id] || 1) + 1, // Default count to 1 if undefined
+  }));
+};
+
+const totalWeight = tanlanganMahsulotlar.reduce((total, product) => {
+  return total + ((counts[product.id] || 0) * product.weight);
+}, 0);
+
+const totalPrice = tanlanganMahsulotlar.reduce((total, product) => {
+  return total + ((counts[product.id] || 0) * product.price);
+}, 0).toFixed(2);
+
+  
   return (
     <section className="py-10 ">
       {tanlanganMahsulotlar.length > 0 ? (
@@ -82,17 +84,15 @@ const Korzinka = () => {
                         {e.price} ₽
                       </span>
                     </div>
-                    <div className="flex items-center space-x-5 border-2 border-input p-3 rounded-xl">
-                      <button onClick={() => decrement(e.id)} className="">
-                        <img src={minus} alt="" />
-                      </button>
-                      <span className="mx-2 text-sm font-medium text-head">
-                        {counts[e.id]} шт
-                      </span>
-                      <button onClick={() => increment(e.id)} className="">
-                        <img src={pilus} alt="" />
-                      </button>
-                    </div>
+                    <div className="flex  justify-between items-center mb-2">
+                                    <button onClick={() => handleDecrease(e.id)}>
+                                        <img src={minus} alt="minus" />
+                                    </button>
+                                    <span className="mx-2 text-lg">{counts[e.id] || 1}</span>
+                                    <button onClick={() => handleIncrease(e.id)}>
+                                        <img src={pilus} alt="plus" />
+                                    </button>
+                                </div>
                   </div>
                 </li>
               ))}
@@ -132,8 +132,7 @@ const Korzinka = () => {
                       Товары (2) – 0,35 кг
                     </p>
                     <span className="text-head text-base font-semibold">
-                      {" "}
-                      {totalPrice} ₽{" "}
+                    {totalWeight}
                     </span>
                   </div>
 
@@ -145,7 +144,7 @@ const Korzinka = () => {
                       </p>
                     </div>
                     <p className="text-head text-base font-semibold">
-                      169,00 ₽{" "}
+                    {totalPrice}
                     </p>
                   </div>
                 </div>
