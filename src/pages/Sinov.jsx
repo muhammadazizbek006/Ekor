@@ -95,14 +95,14 @@ const Sinov = () => {
     const handleDecrease = (id) => {
         setCounts((prevCounts) => ({
             ...prevCounts,
-            [id]: (prevCounts[id] || 0) - 1,
+            [id]: Math.max((prevCounts[id] || 1) - 1, 1), // Ensure count is at least 1
         }));
     };
 
     const handleIncrease = (id) => {
         setCounts((prevCounts) => ({
             ...prevCounts,
-            [id]: (prevCounts[id] || 0) + 1,
+            [id]: (prevCounts[id] || 1) + 1, // Default count to 1 if undefined
         }));
     };
 
@@ -112,6 +112,14 @@ const Sinov = () => {
             [product.id]: !prevLikes[product.id],
         }));
     };
+
+    const totalWeight = filteredProducts.reduce((total, product) => {
+        return total + ((counts[product.id] || 0) * product.weight);
+    }, 0);
+
+    const totalPrice = filteredProducts.reduce((total, product) => {
+        return total + ((counts[product.id] || 0) * product.price);
+    }, 0);
 
     return (
         <section>
@@ -213,17 +221,17 @@ const Sinov = () => {
 
                             <AccordionBody className="flex flex-col items-start space-y-5">
                                 {open === 3 &&
-                                    files.map((nameandinfo, index) => (
+                                    files.map((file, index) => (
                                         <button
                                             className={`text-sm py-2 w-[250px] rounded-lg pl-4 text-start text-head font-medium ${
-                                                selectedCategory === nameandinfo
+                                                selectedCategory === file
                                                     ? "bg-foot"
                                                     : "bg-transparent"
                                             }`}
                                             key={index}
-                                            onClick={() => setSelectedCategory(nameandinfo)}
+                                            onClick={() => setSelectedCategory(file)}
                                         >
-                                            {nameandinfo}
+                                            {file}
                                         </button>
                                     ))}
                             </AccordionBody>
@@ -231,73 +239,62 @@ const Sinov = () => {
                     </div>
                 </div>
 
-                {/* right */}
-                <div className="flex flex-col">
-                    <div className="flex items-center mb-5">
-                        <h3 className="text-[32px] font-semibold text-head mr-3">
-                            {open === 1
-                                ? "Филе рыбы, стейки, фарш"
-                                : open === 2
-                                ? "Готовая продукция «Экор»"
-                                : "Изделия из теста"}
-                        </h3>
-                        <span className="text-sm font-medium text-gray ">
-                            {filteredProducts.length} товара
-                        </span>
-                    </div>
-
-                    <div className="mb-16">
-                        <ul className="grid grid-cols-3 gap-y-10 gap-x-5">
-                            {filteredProducts.slice(0, 6).map((e) => {
-                                return (
-                                    <li
-                                        className="relative bg-white rounded-lg p-4 w-[250px]"
-                                        key={e.id}
-                                    >
-                                        <div className="flex items-center justify-between mb-3">
-                                            <img src={e.img} alt="img" className="w-[72px] h-[72px]" />
-                                            <button
-                                                className="absolute right-4 top-4"
-                                                onClick={() => toggleLike(e)}
-                                            >
-                                                <img
-                                                    src={
-                                                        likedProducts[e.id]
-                                                            ? likeactive
-                                                            : like
-                                                    }
-                                                    alt="like"
-                                                />
-                                            </button>
-                                        </div>
-                                        <h4 className="text-sm font-semibold text-head mb-1">
-                                            {e.name}
-                                        </h4>
-                                        <p className="text-sm text-gray mb-3">{e.weight}</p>
-                                        <div className="flex items-center justify-between">
-                                            <button
-                                                className="bg-foot text-white px-3 py-1 rounded-lg"
-                                                onClick={() => handleDecrease(e.id)}
-                                            >
-                                                -
-                                            </button>
-                                            <span className="text-lg font-semibold text-head">
-                                                {counts[e.id] || 0}
-                                            </span>
-                                            <button
-                                                className="bg-foot text-white px-3 py-1 rounded-lg"
-                                                onClick={() => handleIncrease(e.id)}
-                                            >
-                                                +
-                                            </button>
-                                        </div>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
+                {/* right card product */}
+                <div className="flex flex-col items-start space-y-4">
+                    {filteredProducts.map((item) => (
+                        <div
+                            key={item.id}
+                            className="flex flex-row bg-white p-4 rounded-lg w-full mb-4"
+                        >
+                            <div className="w-[100px] h-[100px] mr-4 bg-gray-200 rounded-lg">
+                                <img
+                                    src={item.image}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover rounded-lg"
+                                />
+                            </div>
+                            <div className="flex flex-col justify-between w-full">
+                                <div className="flex justify-between items-center mb-2">
+                                    <h3 className="text-lg font-semibold">{item.name}</h3>
+                                    <button onClick={() => toggleLike(item)}>
+                                        <img
+                                            src={likedProducts[item.id] ? likeactive : like}
+                                            alt="like"
+                                        />
+                                    </button>
+                                </div>
+                                <p className="text-gray-600 text-sm mb-2">{item.description}</p>
+                                <div className="flex items-center mb-2">
+                                    <button onClick={() => handleDecrease(item.id)}>
+                                        <img src={minus} alt="minus" />
+                                    </button>
+                                    <span className="mx-2 text-lg">{counts[item.id] || 1}</span>
+                                    <button onClick={() => handleIncrease(item.id)}>
+                                        <img src={pilus} alt="plus" />
+                                    </button>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <p className="text-lg font-semibold">
+                                        {item.price * (counts[item.id] || 1)} сом
+                                    </p>
+                                    <button className="flex items-center bg-green-500 text-white p-2 rounded-lg">
+                                        <img src={shop} alt="shop" className="mr-2" />
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            {/* Total */}
+            <div className="flex justify-between mt-4 p-4 bg-gray-100 rounded-lg">
+                <p className="text-lg font-semibold">Общий вес: {totalWeight} кг</p>
+                <p className="text-lg font-semibold">Общая сумма: {totalPrice} сом</p>
+            </div>
+
+            <Subscribetwo />
         </section>
     );
 };

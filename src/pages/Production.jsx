@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Processing from "../components/Production/Processing";
 import { Link } from "react-router-dom";
 // data
@@ -12,6 +13,7 @@ import steyk from "../imgs/acardion/file.svg";
 import likeactive from "../imgs/Production/likeactive.svg";
 import finished from '../imgs/acardion/finished.svg'
 import xamr from '../imgs/acardion/xamr.svg'
+
 // material tailwind
 import {
   Accordion,
@@ -19,9 +21,10 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Subscribetwo from "../components/Production/Subscribetwo";
-import { useDispatch } from "react-redux";
+
 import { addProductToWishlist } from "../store/slice/productsWishlistDataSlice";
 import { addProductToLike } from "../store/slice/laykSlice";
+
 
 function Icon({ id, open }) {
   return (
@@ -48,7 +51,6 @@ const Production = () => {
   const [open, setOpen] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [counts, setCounts] = useState({});
 
   const [files, setFiles] = useState([]);
 
@@ -95,19 +97,23 @@ const Production = () => {
     setOpen(id);
   };
 
-  const handleDecrease = (id) => {
-    setCounts((prevCounts) => ({
-      ...prevCounts,
-      [id]: (prevCounts[id] || 0) - 1,
-    }));
-  };
+  const dispatch = useDispatch();
 
-  const handleIncrease = (id) => {
-    setCounts((prevCounts) => ({
-      ...prevCounts,
-      [id]: (prevCounts[id] || 0) + 1,
-    }));
-  };
+  const tanlanganMahsulotlar = useSelector(
+    (store) => store.tanlanganMahsulotlar.data
+  );
+
+  const initialCounts = tanlanganMahsulotlar.reduce((acc, product) => {
+    acc[product.id] = 1; // Har bir mahsulot uchun boshlang'ich sanash qiymati
+    return acc;
+  }, {});
+
+
+
+
+
+
+
 
   const [likedProducts, setLikedProducts] = useState({});
 
@@ -123,14 +129,38 @@ const Production = () => {
 
 
 
-  const dispatch = useDispatch()
+
   const mahsulotniWishlistgaQoshish = (product) => {
     dispatch(addProductToWishlist(product));
   };
 
   // narx
+  const [counts, setCounts] = useState(initialCounts);
 
-  
+  const handleDecrease = (id) => {
+    setCounts((prevCounts) => ({
+        ...prevCounts,
+        [id]: Math.max((prevCounts[id] || 1) - 1, 1), // Ensure count is at least 1
+    }));
+};
+
+const handleIncrease = (id) => {
+    setCounts((prevCounts) => ({
+        ...prevCounts,
+        [id]: (prevCounts[id] || 1) + 1, // Default count to 1 if undefined
+    }));
+};
+
+const totalWeight = filteredProducts.reduce((total, product) => {
+  const count = counts[product.id] || 0;
+  return total + (count * product.weight);
+}, 0);
+
+const totalPrice = filteredProducts.reduce((total, product) => {
+  const count = counts[product.id] || 0;
+  return total + (count * product.price);
+}, 0);
+
   
   return (
     <>
@@ -317,21 +347,15 @@ const Production = () => {
                       </Link>
 
                       {/* counter */}
-                      <div className="flex items-center justify-between mb-2">
-                        <button
-                          onClick={() => handleDecrease(e.id)}
-                          className=""
-                        >
-                          <img src={minus} alt="minus" />
+                      <div className="flex justify-between items-center mb-2">
+                        <button onClick={() => handleDecrease(e.id)}>
+                            <img src={minus} alt="minus" />
                         </button>
-                        <span className="text-lg">{counts[e.id]} кг</span>
-                        <button
-                          onClick={() => handleIncrease(e.id)}
-                          className=""
-                        >
-                          <img src={pilus} alt="pilus" />
+                        <span className="mx-2 text-lg">{counts[e.id] || 1}</span>
+                        <button onClick={() => handleIncrease(e.id)}>
+                            <img src={pilus} alt="plus" />
                         </button>
-                      </div>
+                     </div>
 
                       <div className="flex justify-between items-center">
                         <div>
