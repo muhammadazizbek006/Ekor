@@ -19,9 +19,12 @@ const ProductsReport = () => {
                         </div>
                         {/* bottom */}
                         <div className='flex items-center  z-0 justify-between'>
+
+                           
                             <button className='absolute top-[154px]'>
                                 <img src={e.btn} alt="" />
                             </button>
+
                             {/* img */}
                             <div className='absolute right-0  z-10 top-16'>
                                 <img src={e.img} alt="" />
