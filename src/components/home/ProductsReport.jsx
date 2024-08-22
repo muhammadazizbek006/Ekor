@@ -17,6 +17,7 @@ const ProductsReport = () => {
                             <h3 className='md:text-xl xl:text-2xl font-semibold text-head leading-7 mb-1.5'>{e.title}</h3>
                             <p className='text-sm font-medium text-head leading-[18px] max-w-[181px]'>{e.sharx}</p>
                         </div>
+                        
                         {/* bottom */}
                       <div className='flex items-center  z-0 justify-between'>
                     
