@@ -11,6 +11,7 @@ const ProductsReport = () => {
           {Productsreport.map((e) => {
             return (
               <li
+              
                 key={e.id}
                 className="shadow-xl  h-56 pt-5 px-4 lg:px-5  rounded-2xl relative"
               >
@@ -42,7 +43,7 @@ const ProductsReport = () => {
             );
           })}
         </ul>
-        
+
       </div>
     </section>
   );
