@@ -6,6 +6,7 @@ const ProductsReport = () => {
   return (
     <section className="mb-3">
       <div className="containerb ">
+
         <ul className="grid grid-cols-3  gap-x-3  ">
           {Productsreport.map((e) => {
             return (
@@ -26,7 +27,7 @@ const ProductsReport = () => {
 
                   {/* bottom */}
                   <div className="flex items-center  z-0 justify-between">
-                    
+
                     <button className="absolute top-[154px]">
                       <img src={e.btn} alt="" />
                     </button>
@@ -41,6 +42,7 @@ const ProductsReport = () => {
             );
           })}
         </ul>
+        
       </div>
     </section>
   );
