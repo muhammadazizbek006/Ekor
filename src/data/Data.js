@@ -76,6 +76,7 @@ import whatsapp from "../imgs/productsreport/whatsappm.svg";
 import ikra from "../imgs/productsreport/ikra.svg";
 import mashina from "../imgs/productsreport/mashina.svg";
 import goom from "../imgs/productsreport/godom.svg";
+
 export const Productsreport = [
   {
     id: 1,
@@ -83,6 +84,8 @@ export const Productsreport = [
     sharx: `Узнайте наши цены за пару секунд без писем и звонков менеджеру`,
     img: telefon,
     btn: whatsapp,
+    lg:'width-[106px]',
+    md:'width-[7px]',
   },
   {
     id: 2,
@@ -90,12 +93,16 @@ export const Productsreport = [
     sharx: `Акционная цена 1700 ₽ / кг`,
     img: ikra,
     btn: goom,
+    lg:'width-[177px]',
+    md:'width-[100px]',
   },
   {
     id: 3,
     title: `Доставка в день заказа`,
     sharx: `Закажите до 11.00`,
     img: mashina,
+    lg:'width-[274px]',
+    md:'width-[200px]',
   },
 ];
 
