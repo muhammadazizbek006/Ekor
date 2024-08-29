@@ -37,6 +37,9 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      screens:{
+        '524':'524px'
+      }
     },
   },
   plugins: [],

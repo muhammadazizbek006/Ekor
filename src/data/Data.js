@@ -110,7 +110,8 @@ export const Productsreport = [
 import pr1 from "../imgs/ProductsOffer/pr1.jpg";
 import pr2 from "../imgs/ProductsOffer/pr2.jpg";
 import pr3 from "../imgs/ProductsOffer/pr3.jpg";
-import pr4 from "../imgs/ProductsOffer/pr3.jpg";
+import pr4 from "../imgs/ProductsOffer/pr4.jpg";
+
 export const products = [
   {
     id: 1,
