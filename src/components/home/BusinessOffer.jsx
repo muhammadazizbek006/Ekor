@@ -180,7 +180,7 @@ const BusinessOffer = () => {
               {/* checkbox and btn */}
               <div className="flex flex-col">
                 <div className="flex items-start mb-8">
-                  <input className="mr-3 h-5 w-5" type="checkbox" />
+                  <input className="mr-3 h-5 w-7" type="checkbox" />
                   <p className="text-xs font-medium text-gray">
                     Подтверждаю своё согласие на обработку и хранение моих
                     персональных данных в соответствии с пользовательским
