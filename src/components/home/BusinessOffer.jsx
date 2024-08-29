@@ -180,9 +180,10 @@ const BusinessOffer = () => {
                 />
 
               </div>
-              
+
               {/* checkbox and btn */}
               <div className="flex flex-col">
+
                 <div className="flex items-start mb-8">
                   <input className="mr-3 h-5 w-7" type="checkbox" />
                   <p className="text-xs font-medium text-gray">
@@ -191,9 +192,11 @@ const BusinessOffer = () => {
                     соглашением
                   </p>
                 </div>
+
                 <button className="bg-sariq py-3 textsm font-semibold rounded-lg text-head">
                   Получить
                 </button>
+                
               </div>
             </div>
           </div>
