@@ -6,7 +6,7 @@ const MeatAndFruit = () => {
   return (
     <section>
         <div className="containerb mb-10">
-        <ul className='grid grid-cols-2 gap-y-10 gap-x-5'>
+        <ul className='grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-5'>
             {products2.map((product, index) => (
               <Link>
                 <ProductLi 

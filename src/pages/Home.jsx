@@ -20,7 +20,7 @@ const Home = () => {
       <Hero/>
       <ProductsReport/>
       <ProductsOffer/>
-      {/* <MeatAndFruit/> */}
+      <MeatAndFruit/>
       {/* <HouseholdProducts/> */}
       {/* <BusinessOffer/> */}
       {/* <BusinessMaterials/> */}

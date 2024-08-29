@@ -12,16 +12,19 @@ const ProductsOffer = () => {
             Компания предлагает более 500 наименований рыбной продукции и разнообразных товаров питания
           </h2>
           
-          <ul className='grid 524:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-x-5'>
+          <ul className='grid grid-cols-1 524:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-y-5 lg:gap-y-0 gap-x-5'>
             {products.map((product, index) => (
-              <Link>
-                <ProductLi 
-                  key={index}
-                  imageSrc={product.img}
-                  title={product.title}
-                  description={product.sharx}
-                />
-              </Link>
+              <li className='flex flex-col justify-center'>
+                <Link>
+                  <ProductLi 
+                    key={index}
+                    imageSrc={product.img}
+                    title={product.title}
+                    description={product.sharx}
+                  />
+                </Link>
+
+              </li>
             ))}
           </ul>
         </div>
