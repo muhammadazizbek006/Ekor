@@ -21,7 +21,7 @@ const Home = () => {
       <ProductsReport/>
       <ProductsOffer/>
       <MeatAndFruit/>
-      {/* <HouseholdProducts/> */}
+      <HouseholdProducts/>
       {/* <BusinessOffer/> */}
       {/* <BusinessMaterials/> */}
       {/* <SpecialOffers/> */}
