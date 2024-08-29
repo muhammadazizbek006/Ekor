@@ -165,10 +165,11 @@ const BusinessOffer = () => {
 
               {/* Номер телефона */}
               <div>
-                
+
                 <label className="mb-2 text-sm font-medium text-head">
                   Номер телефона
                 </label>
+
                 <input
                   onChange={handlePhone}
                   value={phone}
@@ -177,7 +178,9 @@ const BusinessOffer = () => {
                   type="tel"
                   placeholder="Номер телефона"
                 />
+
               </div>
+              
               {/* checkbox and btn */}
               <div className="flex flex-col">
                 <div className="flex items-start mb-8">
