@@ -81,105 +81,51 @@ const BusinessOffer = () => {
           className="bg-white p-10 rounded-[20px] flex    justify-between"
         >
           {/* select */}
-          <div className="space-y-3 mr-5">
-            <h3 className="text-head text-2xl font-semibold mb-3" >по покупкам</h3>
-            {/* Ваша ниша */}
-            <div className="flex items-center">
-              <span className="bg-head   text-white rounded-full mr-4 px-5 py-3 ">
-                1
-              </span>
+          <div className="space-y-3 mr-5 w-full">
+  <h3 className="text-head text-2xl font-semibold mb-3">по покупкам</h3>
+  {/* Ваша ниша */}
+  <div className="flex items-center w-full">
+    <span className="bg-head text-white rounded-full mr-4 px-5 py-3">1</span>
+    <div className="flex flex-col w-full">
+      <label className="mb-1 text-sm font-medium text-head">Ваша ниша</label>
+      <div className="relative w-full">
+        <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+          <option value="">Ресторан</option>
+          <option value="">Столовая</option>
+          <option value="">Маркет</option>
+          <option value="">Оптовик</option>
+        </select>
+      </div>
+    </div>
+  </div>
 
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm font-medium text-head">
-                  Ваша ниша
-                </label>
-                <div className="relative w-[446px]">
-  <select className="w-full border-input border py-3   px-4 rounded-lg " id="customSelect">
-    <option value="">wefewf</option>
-    <option value="">wefewf</option>
-    <option value="">wefewf</option>
-    <option value="">wefewf</option>
-  </select>
-</div>
+  {/* Способ получения */}
+  <div className="flex items-center w-full">
+    <span className="bg-head text-white rounded-full mr-4 px-5 py-3">2</span>
+    <div className="flex flex-col w-full">
+      <label className="mb-1 text-sm font-medium text-head">Способ получения</label>
+      <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+        <option value="">Доставка по МСК или МО</option>
+        <option value="">Самовывоз</option>
+      </select>
+    </div>
+  </div>
 
-
-              </div>
-            </div>
-
-            {/* Способ получения*/}
-            <div className="flex items-center">
-              <span className="bg-head   text-white rounded-full mr-4 px-5 py-3 ">
-                2
-              </span>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm font-medium text-head">
-                  Способ получения
-                </label>
-                <Select
-                  className=" w-[444px] rounded-lg "
-                  
-                  placeholder="Доставка по МСК или МО"
-                  optionFilterProp="label"
-                  onChange={onChange}
-                  options={[
-                    {
-                      value: "Курьерская доставка",
-                      label: "Курьерская доставка",
-                    },
-                    {
-                      value: "Самовывоз",
-                      label: "Самовывоз",
-                    },
-                    {
-                      value: "Доставка на почту",
-                      label: "Доставка на почту",
-                    },
-                    {
-                      value: "Доставка до двери",
-                      label: "Доставка до двери",
-                    },
-                    {
-                      value: "Пункты выдачи",
-                      label: "Пункты выдачи",
-                    },
-                  ]}
-                />
-              </div>
-            </div>
-
-            {/* Ваши объемы закупки */}
-            <div className="flex items-center">
-              <span className="bg-head   text-white rounded-full mr-4 px-5 py-3 ">
-                3
-              </span>
-              <div className="flex flex-col">
-                <label className="mb-1 text-sm font-medium text-head">
-                  Ваши объемы закупки
-                </label>
-                <Select
-                  className=" w-[444px] rounded-lg "
-                  
-                  placeholder="от 10 000 ₽ до 25 000 ₽ "
-                  optionFilterProp="label"
-                  onChange={onChange}
-                  options={[
-                    {
-                      value: "от 25 000 ₽ до 50 000 ₽",
-                      label: "от 25 000 ₽ до 50 000 ₽",
-                    },
-                    {
-                      value: "от 50 000 ₽ до 100 000 ₽",
-                      label: "от 50 000 ₽ до 100 000 ₽",
-                    },
-                    {
-                      value: "более 100 000 ₽",
-                      label: "более 100 000 ₽",
-                    },
-                  ]}
-                />
-              </div>
-            </div>
+  {/* Ваши объемы закупки */}
+  <div className="flex items-center w-full">
+    <span className="bg-head text-white rounded-full mr-4 px-5 py-3">3</span>
+    <div className="flex flex-col w-full">
+      <label className="mb-1 text-sm font-medium text-head">Ваши объемы закупки</label>
+      <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+        <option value="">до 25 000 ₽</option>
+        <option value="">от 25 000 ₽ до 70 000 ₽</option>
+        <option value="">от 70 000 ₽ до 300 000 ₽</option>
+        <option value="">от 300 000 ₽</option>
+      </select>
+    </div>
+  </div>
           </div>
+
           {/* Контактные данные */}
           <div>
             <h3 className="text-head text-2xl font-semibold mb-3">
@@ -196,7 +142,7 @@ const BusinessOffer = () => {
                   onChange={handleName}
                   value={name}
                   required
-                  className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light"
+                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
                   type="text"
                   placeholder="Имя и Фамилия"
                 />
@@ -211,7 +157,7 @@ const BusinessOffer = () => {
                   onChange={handleemail}
                   value={email}
                   required
-                  className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light"
+                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
                   type="email"
                   placeholder="Email"
                 />
@@ -226,7 +172,7 @@ const BusinessOffer = () => {
                   onChange={handlePhone}
                   value={phone}
                   required
-                  className="border border-input w-[490px] py-0.5 px-4 rounded-md  placeholder:font-light"
+                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
                   type="tel"
                   placeholder="Номер телефона"
                 />
@@ -234,7 +180,7 @@ const BusinessOffer = () => {
               {/* checkbox and btn */}
               <div className="flex flex-col">
                 <div className="flex items-start mb-8">
-                  <input className="mr-3 w-5 h-6" type="checkbox" />
+                  <input className="mr-3 h-5 w-5" type="checkbox" />
                   <p className="text-xs font-medium text-gray">
                     Подтверждаю своё согласие на обработку и хранение моих
                     персональных данных в соответствии с пользовательским
