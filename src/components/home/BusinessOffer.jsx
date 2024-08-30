@@ -37,6 +37,7 @@ const BusinessOffer = () => {
   };
 
   const handleSubmitInput = (event) => {
+    
     event.preventDefault();
     if (
       name === "" ||
