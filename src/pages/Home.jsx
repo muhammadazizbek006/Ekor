@@ -25,7 +25,7 @@ const Home = () => {
       <BusinessOffer/>
       <BusinessMaterials/>
       <SpecialOffers/>
-      {/* <OurAttentionMatters/> */}
+      <OurAttentionMatters/>
       {/* <Subscribe/> */}
       {/* <ReviewsFromOurCustomers/> */}
 
