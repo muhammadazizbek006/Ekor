@@ -37,7 +37,7 @@ const BusinessOffer = () => {
   };
 
   const handleSubmitInput = (event) => {
-    
+
     event.preventDefault();
     if (
       name === "" ||
@@ -79,7 +79,7 @@ const BusinessOffer = () => {
         {/* form */}
         <form
           onSubmit={handleSubmitInput}
-          className="bg-white p-10 rounded-[20px] flex    justify-between"
+          className="bg-white p-5 858:p-10 rounded-[20px] flex flex-col space-y-6 858:space-y-0 858:flex-row     justify-between"
         >
           {/* select */}
           <div className="space-y-3 mr-5 w-full">
@@ -87,10 +87,10 @@ const BusinessOffer = () => {
   {/* Ваша ниша */}
   <div className="flex items-center w-full">
     <span className="bg-head text-white rounded-full mr-4 px-5 py-3">1</span>
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full ">
       <label className="mb-1 text-sm font-medium text-head">Ваша ниша</label>
       <div className="relative w-full">
-        <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+        <select className=" w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 px-4 rounded-lg" id="customSelect">
           <option value="">Ресторан</option>
           <option value="">Столовая</option>
           <option value="">Маркет</option>
@@ -105,7 +105,7 @@ const BusinessOffer = () => {
     <span className="bg-head text-white rounded-full mr-4 px-5 py-3">2</span>
     <div className="flex flex-col w-full">
       <label className="mb-1 text-sm font-medium text-head">Способ получения</label>
-      <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+      <select className=" w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 px-4 rounded-lg" id="customSelect">
         <option value="">Доставка по МСК или МО</option>
         <option value="">Самовывоз</option>
       </select>
@@ -117,7 +117,7 @@ const BusinessOffer = () => {
     <span className="bg-head text-white rounded-full mr-4 px-5 py-3">3</span>
     <div className="flex flex-col w-full">
       <label className="mb-1 text-sm font-medium text-head">Ваши объемы закупки</label>
-      <select className="w-full border-input border py-4 px-4 rounded-lg" id="customSelect">
+      <select className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 px-4 rounded-lg" id="customSelect">
         <option value="">до 25 000 ₽</option>
         <option value="">от 25 000 ₽ до 70 000 ₽</option>
         <option value="">от 70 000 ₽ до 300 000 ₽</option>
@@ -135,7 +135,7 @@ const BusinessOffer = () => {
             {/* inputs */}
             <div className=" flex flex-col justify-between space-y-3">
               {/* Имя и Фамилия */}
-              <div>
+              <div className="flex flex-col">
                 <label className="mb-2 text-sm font-medium text-head">
                   Имя и Фамилия
                 </label>
@@ -143,14 +143,14 @@ const BusinessOffer = () => {
                   onChange={handleName}
                   value={name}
                   required
-                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
+                  className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 rounded-md  placeholder:font-light"
                   type="text"
                   placeholder="Имя и Фамилия"
                 />
               </div>
 
               {/* Email */}
-              <div>
+              <div className="flex flex-col">
                 <label className="mb-2 text-sm font-medium text-head">
                   Email
                 </label>
@@ -158,14 +158,14 @@ const BusinessOffer = () => {
                   onChange={handleemail}
                   value={email}
                   required
-                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
+                  className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 px-4 rounded-md  placeholder:font-light"
                   type="email"
                   placeholder="Email"
                 />
               </div>
 
               {/* Номер телефона */}
-              <div>
+              <div className="flex flex-col">
 
                 <label className="mb-2 text-sm font-medium text-head">
                   Номер телефона
@@ -175,7 +175,7 @@ const BusinessOffer = () => {
                   onChange={handlePhone}
                   value={phone}
                   required
-                  className="border border-input w-[490px] py-4 px-4 rounded-md  placeholder:font-light"
+                  className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 px-4 rounded-md  placeholder:font-light"
                   type="tel"
                   placeholder="Номер телефона"
                 />

@@ -38,7 +38,8 @@ export default {
         sans: ['Montserrat', 'sans-serif'],
       },
       screens:{
-        '524':'524px'
+        '524':'524px',
+        '858':'858'
       }
     },
   },
