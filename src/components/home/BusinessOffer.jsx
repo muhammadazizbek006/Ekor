@@ -79,7 +79,7 @@ const BusinessOffer = () => {
         {/* form */}
         <form
           onSubmit={handleSubmitInput}
-          className="bg-white p-5 858:p-10 rounded-[20px] flex flex-col space-y-6 858:space-y-0 858:flex-row     justify-between"
+          className="bg-white p-5 858:p-10 rounded-[20px] flex flex-col md:flex-row space-y-6 858:space-y-0 858:flex-row     md:justify-between"
         >
           {/* select */}
           <div className="space-y-3 mr-5 w-full">
@@ -143,7 +143,7 @@ const BusinessOffer = () => {
                   onChange={handleName}
                   value={name}
                   required
-                  className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 rounded-md  placeholder:font-light"
+                  className="w-[260px] 858:w-[340px] lg:w-[380px] xl:w-[480px] border-input border py-3 md:py-4 rounded-md pl-2  placeholder:font-light"
                   type="text"
                   placeholder="Имя и Фамилия"
                 />
