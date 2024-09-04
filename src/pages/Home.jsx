@@ -26,7 +26,7 @@ const Home = () => {
       <BusinessMaterials/>
       <SpecialOffers/>
       <OurAttentionMatters/>
-      {/* <Subscribe/> */}
+      <Subscribe/>
       {/* <ReviewsFromOurCustomers/> */}
 
     </>
