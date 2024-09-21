@@ -15,8 +15,6 @@ import RequestForCooperation from '../components/home/RequestForCooperation'
 const Home = () => {
   return (
     <>
-    
-
       <Hero/>
       <ProductsReport/>
       <ProductsOffer/>
