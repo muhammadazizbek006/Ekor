@@ -18,7 +18,6 @@ const Home = () => {
       <Hero/>
       <ProductsReport/>
       <ProductsOffer/>
-      
       <MeatAndFruit/>
       <HouseholdProducts/>
       <BusinessOffer/>
