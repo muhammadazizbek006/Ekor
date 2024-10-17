@@ -205,6 +205,7 @@ const Catalog = () => {
                 icon={<Icon id={3} open={open} />}
             >
                 <AccordionHeader
+                
                 className="flex items-center bg-white rounded-lg p-4 mb-2"
                 
                 onClick={() => handleOpen(3)}
