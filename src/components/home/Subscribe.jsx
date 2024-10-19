@@ -41,7 +41,7 @@ const Subscribe = () => {
             </div>
         </div>
         {/* right */}
-        <div className='absolute -right-56  top-2 z-0 '>
+        <div className='absolute -right-56  top-2 z-0 w-[314px] h-[402px] '>
             <img className='' src={phone} alt="" />
         </div>
         </div>
